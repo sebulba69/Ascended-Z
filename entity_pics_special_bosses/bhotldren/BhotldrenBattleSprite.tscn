@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://deda7ma8n2ifs"]
+
+[ext_resource type="Texture2D" uid="uid://bmihdbhbu1481" path="res://entity_pics_special_bosses/bhotldren/bhotldren_body.png" id="1_n2tdh"]
+[ext_resource type="Texture2D" uid="uid://c2rjweyu0yov1" path="res://entity_pics_special_bosses/bhotldren/bhotldren_eyes_bg.png" id="2_y7s4n"]
+[ext_resource type="Texture2D" uid="uid://bddpqdns6ffhv" path="res://entity_pics_special_bosses/bhotldren/bhotldren_eyes_outline.png" id="3_4vr6u"]
+
+[sub_resource type="Animation" id="Animation_37ich"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("eyes_bg:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("eyes_outline:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(993, 540)]
+}
+
+[sub_resource type="Animation" id="Animation_rnxm4"]
+resource_name = "bhotldren_loop"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("eyes_bg:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.977256, 0.99)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("eyes_outline:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9772, 0.99)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(993, 540), Vector2(993, 547)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ysc2"]
+_data = {
+"RESET": SubResource("Animation_37ich"),
+"bhotldren_loop": SubResource("Animation_rnxm4")
+}
+
+[node name="Bhotldren" type="Node2D"]
+position = Vector2(993, 540)
+
+[node name="bodyBG" type="Sprite2D" parent="."]
+texture_filter = 2
+texture = ExtResource("1_n2tdh")
+
+[node name="eyes_bg" type="Sprite2D" parent="."]
+texture_filter = 2
+texture = ExtResource("2_y7s4n")
+
+[node name="eyes_outline" type="Sprite2D" parent="."]
+texture_filter = 2
+texture = ExtResource("3_4vr6u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6ysc2")
+}
+autoplay = "bhotldren_loop"

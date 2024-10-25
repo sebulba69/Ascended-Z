@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://ooqmm213q4rl"]
+
+[ext_resource type="Texture2D" uid="uid://daahtahiiftrg" path="res://entity_pics_special_bosses/netalla/final_boss_full_body.png" id="1_bq7cn"]
+
+[sub_resource type="Animation" id="Animation_mhctx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ywks0"]
+resource_name = "boss_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nwxpj"]
+_data = {
+"RESET": SubResource("Animation_mhctx"),
+"boss_animation": SubResource("Animation_ywks0")
+}
+
+[node name="NetallaBattleSprite" type="Node2D"]
+texture_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 2
+texture = ExtResource("1_bq7cn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nwxpj")
+}
+autoplay = "boss_animation"

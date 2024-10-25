@@ -1,0 +1,101 @@
+[gd_scene load_steps=12 format=3 uid="uid://bqrhisukorc1o"]
+
+[ext_resource type="Script" path="res://dungeon_crawling/scenes/TileScene.cs" id="1_q0og1"]
+[ext_resource type="Texture2D" uid="uid://p2lm6a6lgn7g" path="res://dungeon_crawling/art_assets/general/shadow.png" id="2_fntij"]
+[ext_resource type="Texture2D" uid="uid://lcmlb3tl5am4" path="res://dungeon_crawling/art_assets/general/bg.png" id="2_gux6g"]
+[ext_resource type="Texture2D" uid="uid://fu3igr300nxf" path="res://dungeon_crawling/art_assets/general/ground.png" id="3_5jj2q"]
+[ext_resource type="Texture2D" uid="uid://cehb84va41u6" path="res://dungeon_crawling/art_assets/general/interior_lines.png" id="4_jca27"]
+[ext_resource type="Texture2D" uid="uid://it8nvcl7m621" path="res://dungeon_crawling/art_assets/general/up.png" id="6_suhg8"]
+[ext_resource type="Texture2D" uid="uid://c6xy28b3dqkai" path="res://dungeon_crawling/art_assets/general/down.png" id="7_48rhv"]
+[ext_resource type="Texture2D" uid="uid://btsejbvti508d" path="res://dungeon_crawling/art_assets/general/left.png" id="8_8lnbc"]
+[ext_resource type="Texture2D" uid="uid://bkeaa6q4ebbmj" path="res://dungeon_crawling/art_assets/general/right.png" id="9_uyghw"]
+[ext_resource type="PackedScene" uid="uid://djlhy6ga7e5t2" path="res://dungeon_crawling/scenes/DungeonEntity.tscn" id="10_g6sag"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="11_vavbw"]
+
+[node name="TileScene" type="Node2D"]
+texture_filter = 2
+script = ExtResource("1_q0og1")
+
+[node name="Tile" type="Node2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 0.27451, 0.27451, 0.756863)
+
+[node name="Shadow" type="Sprite2D" parent="Tile"]
+texture = ExtResource("2_fntij")
+
+[node name="Background" type="Sprite2D" parent="Tile"]
+unique_name_in_owner = true
+texture = ExtResource("2_gux6g")
+
+[node name="Ground" type="Sprite2D" parent="Tile"]
+texture = ExtResource("3_5jj2q")
+
+[node name="InteriorLines" type="Sprite2D" parent="Tile"]
+unique_name_in_owner = true
+texture = ExtResource("4_jca27")
+
+[node name="Doors" type="Node2D" parent="Tile"]
+
+[node name="Up" type="Sprite2D" parent="Tile/Doors"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("6_suhg8")
+
+[node name="Down" type="Sprite2D" parent="Tile/Doors"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("7_48rhv")
+
+[node name="Left" type="Sprite2D" parent="Tile/Doors"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("8_8lnbc")
+
+[node name="Right" type="Sprite2D" parent="Tile/Doors"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("9_uyghw")
+
+[node name="RoomRight" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(368, 0)
+metadata/_edit_lock_ = true
+
+[node name="RoomLeft" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-368, 0)
+metadata/_edit_lock_ = true
+
+[node name="RoomUp" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -368)
+metadata/_edit_lock_ = true
+
+[node name="RoomDown" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 368)
+metadata/_edit_lock_ = true
+
+[node name="Graphic" parent="." instance=ExtResource("10_g6sag")]
+unique_name_in_owner = true
+visible = false
+
+[node name="GraphicContainer" type="CenterContainer" parent="Graphic"]
+unique_name_in_owner = true
+visible = false
+offset_left = -86.0
+offset_top = -88.0
+offset_right = 88.0
+offset_bottom = 67.0
+
+[node name="TeleporterCoordsLabel" type="Label" parent="Graphic/GraphicContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("11_vavbw")
+theme_override_font_sizes/font_size = 50
+text = "[22,44]"
+horizontal_alignment = 1
+vertical_alignment = 1

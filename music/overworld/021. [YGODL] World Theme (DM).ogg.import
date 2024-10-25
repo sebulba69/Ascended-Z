@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://db8xjkxhp3n1o"
+path="res://.godot/imported/021. [YGODL] World Theme (DM).ogg-1828ac5039f793ba61d1202dc0d98d18.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/021. [YGODL] World Theme (DM).ogg"
+dest_files=["res://.godot/imported/021. [YGODL] World Theme (DM).ogg-1828ac5039f793ba61d1202dc0d98d18.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=80.5
+bpm=0.0
+beat_count=0
+bar_beats=4

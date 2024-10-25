@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8c1fin53mgj3"]
+
+[ext_resource type="Texture2D" uid="uid://bccubabd2bgpu" path="res://dungeon_crawling/art_assets/general/character_border.png" id="1_e8nq6"]
+
+[node name="CutsceneEntity" type="Sprite2D"]
+
+[node name="Outline" type="Sprite2D" parent="."]
+position = Vector2(-1, 10.5)
+scale = Vector2(1, 0.994792)
+texture = ExtResource("1_e8nq6")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt8yed2ymis4o"]
+
+[ext_resource type="Script" path="res://misc_icons/CurrencyDisplay.cs" id="1_ln7dr"]
+[ext_resource type="PackedScene" uid="uid://bqmfi0ome6yn4" path="res://misc_icons/Icon.tscn" id="1_r7sy8"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_gx28l"]
+
+[node name="CurrencyDisplay" type="GridContainer"]
+scale = Vector2(2, 2)
+columns = 2
+script = ExtResource("1_ln7dr")
+
+[node name="Icon" parent="." instance=ExtResource("1_r7sy8")]
+layout_mode = 2
+
+[node name="CurrencyAmount" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_gx28l")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1

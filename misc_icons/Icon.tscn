@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqmfi0ome6yn4"]
+
+[ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="1_j6xfy"]
+[ext_resource type="Script" path="res://misc_icons/Icon.cs" id="2_36r1l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8kx40"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmds6"]
+atlas = ExtResource("1_j6xfy")
+region = Rect2(416, 128, 32, 32)
+
+[node name="Icon" type="TextureRect"]
+texture_filter = 2
+material = SubResource("ShaderMaterial_8kx40")
+custom_minimum_size = Vector2(48, 48)
+texture = SubResource("AtlasTexture_rmds6")
+script = ExtResource("2_36r1l")

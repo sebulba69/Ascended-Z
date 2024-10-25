@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwjmhp4570nke"]
+
+[ext_resource type="Script" path="res://screens/full_screen_boss/ShakeyCam.cs" id="1_euvev"]
+[ext_resource type="AudioStream" uid="uid://dyxxgykvs4hrj" path="res://effects/effect_sounds/Damage4.ogg" id="2_yerjl"]
+
+[node name="Camera" type="Camera2D"]
+position = Vector2(960, 808)
+zoom = Vector2(2, 2)
+script = ExtResource("1_euvev")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_yerjl")
+volume_db = -15.0

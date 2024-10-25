@@ -1,0 +1,177 @@
+[gd_scene load_steps=5 format=3 uid="uid://dob14rb5ely7"]
+
+[ext_resource type="Texture2D" uid="uid://b000qj8oq2gxx" path="res://player_pics/2.png" id="1_0qi7h"]
+[ext_resource type="Script" path="res://screens/battle_info/BattleInfoBox.cs" id="1_xfod0"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_43pi6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mo6x5"]
+bg_color = Color(0.380392, 0.380392, 0.380392, 1)
+
+[node name="BattleInfoBox" type="CenterContainer"]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xfod0")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="EnemyImage" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+texture = ExtResource("1_0qi7h")
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer2/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer2/MarginContainer/PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="EnemyOverview" type="RichTextLabel" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer2/MarginContainer/PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("2_43pi6")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Enemy Name
+Enemy Turns
+Enemy Resistances"
+fit_content = true
+scroll_active = false
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="SkillList" type="ItemList" parent="PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(350, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_43pi6")
+theme_override_font_sizes/font_size = 20
+same_column_width = true
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+texture_filter = 2
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ScriptDescription" type="RichTextLabel" parent="PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/PanelContainer/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("2_43pi6")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "A description of the enemy AI"
+fit_content = true
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_mo6x5")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/PanelContainer/VBoxContainer/PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BackButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(150, 25)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2_43pi6")
+theme_override_font_sizes/font_size = 20
+text = "Back"

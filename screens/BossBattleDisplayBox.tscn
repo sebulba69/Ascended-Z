@@ -1,0 +1,164 @@
+[gd_scene load_steps=8 format=3 uid="uid://uta15moem3y6"]
+
+[ext_resource type="Script" path="res://screens/EntityDisplayBox.cs" id="1_s8640"]
+[ext_resource type="PackedScene" uid="uid://c23fpate1ndy5" path="res://screens/BossHPBar.tscn" id="2_3ht57"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_nwbcd"]
+[ext_resource type="Texture2D" uid="uid://cwk4bbifhudkx" path="res://player_pics/newpicture6.png" id="3_lwu4p"]
+[ext_resource type="PackedScene" uid="uid://t6lhru8f8fr7" path="res://effects/EffectSprite.tscn" id="6_opwtj"]
+[ext_resource type="AudioStream" uid="uid://dyxxgykvs4hrj" path="res://effects/effect_sounds/Damage4.ogg" id="7_68hlu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ceifb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="CharacterCtrlNode" type="PanelContainer"]
+texture_filter = 2
+offset_right = 328.0
+offset_bottom = 225.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ceifb")
+script = ExtResource("1_s8640")
+
+[node name="CharacterCtrlNode" type="VBoxContainer" parent="."]
+texture_filter = 2
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CharacterCtrlNode"]
+texture_filter = 2
+custom_minimum_size = Vector2(174, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CharacterCtrlNode/PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="NameLabel" type="Label" parent="CharacterCtrlNode/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+use_parent_material = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_nwbcd")
+theme_override_font_sizes/font_size = 20
+text = "Name"
+horizontal_alignment = 1
+
+[node name="InfoButton" type="Button" parent="CharacterCtrlNode/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("2_nwbcd")
+theme_override_font_sizes/font_size = 20
+text = "!"
+
+[node name="Picture" type="TextureRect" parent="CharacterCtrlNode"]
+unique_name_in_owner = true
+texture_filter = 2
+use_parent_material = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_lwu4p")
+
+[node name="ResistanceBox" type="HBoxContainer" parent="CharacterCtrlNode/Picture"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_top = -26.0
+offset_right = 87.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PanelContainer2" type="PanelContainer" parent="CharacterCtrlNode/Picture"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Statuses" type="GridContainer" parent="CharacterCtrlNode/Picture"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="PanelContainer2" type="PanelContainer" parent="CharacterCtrlNode"]
+visible = false
+texture_filter = 2
+use_parent_material = true
+custom_minimum_size = Vector2(174, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ResistanceLabel" type="Label" parent="CharacterCtrlNode/PanelContainer2"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+use_parent_material = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_nwbcd")
+theme_override_font_sizes/font_size = 16
+text = "Resistances"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CharacterCtrlNode"]
+layout_mode = 2
+
+[node name="HP" parent="CharacterCtrlNode/MarginContainer" instance=ExtResource("2_3ht57")]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="HPLabel" type="Label" parent="CharacterCtrlNode/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+use_parent_material = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_nwbcd")
+theme_override_font_sizes/font_size = 20
+text = "1200/1200"
+horizontal_alignment = 1
+
+[node name="EffectContainer" type="CenterContainer" parent="."]
+unique_name_in_owner = true
+texture_filter = 2
+use_parent_material = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="EffectSprite" parent="EffectContainer" instance=ExtResource("6_opwtj")]
+unique_name_in_owner = true
+visible = false
+use_parent_material = true
+scale = Vector2(1.5, 1.5)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_68hlu")
+volume_db = -15.0

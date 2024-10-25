@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://crj3apcka8x67"]
+
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_thght"]
+
+[node name="NewSkillsTutorial" type="PanelContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(500, 500)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("1_thght")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Fusions will grant you the following bonuses:
+*[color=yellow] All fusions get an immediate health boost of 1.5x the average Max HP its materials had [/color]
+
+* [color=yellow]Fusions let you combine the skill-sets of other party members together into 1 party member [/color]
+
+* [color=yellow]Fusions will automatically level up all skills transferred for free several times (up to their Fusion Grade, so a Fusion Grade 2 will level up their skills twice) [/color]
+
+As you create fusions, they will appear in the Recruit Custom Shop to be resummoned easily!"
+fit_content = true

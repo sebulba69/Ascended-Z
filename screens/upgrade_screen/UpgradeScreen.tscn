@@ -1,0 +1,266 @@
+[gd_scene load_steps=8 format=3 uid="uid://0r3q62ummh0p"]
+
+[ext_resource type="Script" path="res://screens/upgrade_screen/UpgradeScreen.cs" id="1_6bmuu"]
+[ext_resource type="PackedScene" uid="uid://dyohoojxufv6m" path="res://screens/upgrade_screen/UpgradeItem.tscn" id="2_e1pad"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_krmoi"]
+[ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="3_u3tap"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkhyw"]
+atlas = ExtResource("3_u3tap")
+region = Rect2(32, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffy3i"]
+atlas = ExtResource("3_u3tap")
+region = Rect2(448, 1372, 32, 32)
+margin = Rect2(0, -5, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_my5qn"]
+atlas = ExtResource("3_u3tap")
+region = Rect2(96, 384, 32, 32)
+
+[node name="UpgradeScreen" type="CenterContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6bmuu")
+
+[node name="PanelContainer" type="VBoxContainer" parent="."]
+texture_filter = 2
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_lkhyw")
+expand_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="OwnedTalismans" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_krmoi")
+theme_override_font_sizes/font_size = 28
+text = "12"
+horizontal_alignment = 1
+
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="UpgradeCurrencyIcon" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer3"]
+texture_filter = 2
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_ffy3i")
+stretch_mode = 4
+
+[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="VorpexCount" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer4"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_krmoi")
+theme_override_font_sizes/font_size = 28
+text = "12"
+horizontal_alignment = 1
+
+[node name="KeyInfo" type="HBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="PanelContainer5" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/KeyInfo"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="KeyIcon" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/KeyInfo/PanelContainer5"]
+texture_filter = 2
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_my5qn")
+stretch_mode = 4
+
+[node name="PanelContainer6" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/KeyInfo"]
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="KeyCount" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/KeyInfo/PanelContainer6"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_krmoi")
+theme_override_font_sizes/font_size = 28
+text = "12"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="ConvertButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_krmoi")
+theme_override_font_sizes/font_size = 30
+text = "100 PC→200 VC"
+
+[node name="ConvertButton2" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_krmoi")
+theme_override_font_sizes/font_size = 30
+text = "100 PC←200 VC"
+
+[node name="Convert2XVCButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_krmoi")
+theme_override_font_sizes/font_size = 30
+text = "1,000 PC→2,000 VC"
+
+[node name="Convert2XPCButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_krmoi")
+theme_override_font_sizes/font_size = 30
+text = "1,000 PC←2,000 VC"
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="PCtoVCCheckbox" type="CheckBox" parent="PanelContainer/VBoxContainer/PanelContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_krmoi")
+theme_override_font_sizes/font_size = 30
+text = "x1000"
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4/VBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ItemList" type="ItemList" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4/VBoxContainer/PanelContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(300, 370)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_krmoi")
+theme_override_font_sizes/font_size = 25
+
+[node name="BackButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_krmoi")
+theme_override_font_sizes/font_size = 25
+text = "Back"
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+
+[node name="UpgradeItem" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4/PanelContainer" instance=ExtResource("2_e1pad")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4

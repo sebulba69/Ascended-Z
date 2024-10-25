@@ -1,0 +1,279 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw6girysjrurc"]
+
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2"]
+[ext_resource type="Script" path="res://screens/StartScreen.cs" id="3"]
+[ext_resource type="Script" path="res://screens/AscendedDialogBox.cs" id="4"]
+[ext_resource type="Texture2D" uid="uid://cq8pbliuivvh0" path="res://cg_backgrounds/overworld/004bg00307.jpg" id="5"]
+[ext_resource type="AudioStream" uid="uid://cgb6kermfdhu" path="res://music/theme.ogg" id="5_gxppa"]
+[ext_resource type="AudioStream" uid="uid://cki5ypqtto4t2" path="res://effects/effect_sounds/Buzzer1.ogg" id="6_r3cmc"]
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 5
+
+[node name="VersionLabel" type="Label" parent="TextureRect/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 50
+text = "v.0.00"
+horizontal_alignment = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+texture_filter = 2
+offset_left = 454.0
+offset_top = 344.0
+offset_right = 1466.0
+offset_bottom = 736.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="MainAscendedLabel" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 150
+text = "ASCENDED Z"
+
+[node name="StartingButtons" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+alignment = 1
+
+[node name="NewGameButton" type="Button" parent="CenterContainer/VBoxContainer/StartingButtons"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 50
+text = "New Game"
+
+[node name="LoadGameButton" type="Button" parent="CenterContainer/VBoxContainer/StartingButtons"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 50
+text = "Load Game"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer/StartingButtons"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+
+[node name="CreditsButton" type="Button" parent="CenterContainer/VBoxContainer/StartingButtons"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 50
+text = "Credits"
+
+[node name="QuitGameButton" type="Button" parent="CenterContainer/VBoxContainer/StartingButtons"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 50
+text = "Quit Game"
+
+[node name="NewGameButtons" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="LeftButton" type="Button" parent="CenterContainer/VBoxContainer/NewGameButtons"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "<"
+
+[node name="NewPlayerPicture" type="TextureRect" parent="CenterContainer/VBoxContainer/NewGameButtons"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(250, 232)
+layout_mode = 2
+
+[node name="RightButton" type="Button" parent="CenterContainer/VBoxContainer/NewGameButtons"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = ">"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/NewGameButtons"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/VBoxContainer/NewGameButtons/VBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextEdit" type="TextEdit" parent="CenterContainer/VBoxContainer/NewGameButtons/VBoxContainer/PanelContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 47
+text = "Ascended"
+context_menu_enabled = false
+script = ExtResource("4")
+
+[node name="StartNGButton" type="Button" parent="CenterContainer/VBoxContainer/NewGameButtons/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 45
+text = "ASCEND"
+
+[node name="GoBackButton" type="Button" parent="CenterContainer/VBoxContainer/NewGameButtons/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 40
+text = "Go back..."
+
+[node name="LoadingButtons" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/LoadingButtons"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="CenterContainer/VBoxContainer/LoadingButtons/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 40
+
+[node name="GridContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/LoadingButtons/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="LoadContButton" type="Button" parent="CenterContainer/VBoxContainer/LoadingButtons/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 30
+text = "Continue"
+
+[node name="LoadBackButton" type="Button" parent="CenterContainer/VBoxContainer/LoadingButtons/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[node name="LoadDeleteButton" type="Button" parent="CenterContainer/VBoxContainer/LoadingButtons/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 30
+text = "Delete"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_gxppa")
+volume_db = -10.0
+autoplay = true
+
+[node name="WarningPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_r3cmc")
+volume_db = -10.0

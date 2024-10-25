@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bynnvyaof8uo"
+path="res://.godot/imported/008. [SMT3] Large Map.ogg-98dc066a6a5376a6b62e24ddd9ea7c08.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/008. [SMT3] Large Map.ogg"
+dest_files=["res://.godot/imported/008. [SMT3] Large Map.ogg-98dc066a6a5376a6b62e24ddd9ea7c08.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=4.86
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dhdb7qdtuk0m2"
+path="res://.godot/imported/003. [KH2] Underworld.ogg-40477da2b464e02a5bfb539d0e3c6dbb.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/003. [KH2] Underworld.ogg"
+dest_files=["res://.godot/imported/003. [KH2] Underworld.ogg-40477da2b464e02a5bfb539d0e3c6dbb.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

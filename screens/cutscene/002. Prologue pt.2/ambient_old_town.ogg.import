@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ch16cacgytxy4"
+path="res://.godot/imported/ambient_old_town.ogg-982036cf14e3578ff722b7841bd9809e.oggvorbisstr"
+
+[deps]
+
+source_file="res://screens/cutscene/002. Prologue pt.2/ambient_old_town.ogg"
+dest_files=["res://.godot/imported/ambient_old_town.ogg-982036cf14e3578ff722b7841bd9809e.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

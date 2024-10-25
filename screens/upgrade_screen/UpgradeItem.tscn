@@ -1,0 +1,296 @@
+[gd_scene load_steps=8 format=3 uid="uid://dyohoojxufv6m"]
+
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_hbeb0"]
+[ext_resource type="Texture2D" uid="uid://me31mgsn5gw3" path="res://entity_pics/da-vid.png" id="1_l3ebw"]
+[ext_resource type="Script" path="res://screens/upgrade_screen/UpgradeItem.cs" id="1_r0nl4"]
+[ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="2_as6kt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h1q0"]
+atlas = ExtResource("2_as6kt")
+region = Rect2(32, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hcci"]
+atlas = ExtResource("2_as6kt")
+region = Rect2(448, 1376, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w61p6"]
+atlas = ExtResource("2_as6kt")
+region = Rect2(96, 384, 32, 32)
+
+[node name="UpgradeItem" type="VBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(248, 120)
+alignment = 1
+script = ExtResource("1_r0nl4")
+
+[node name="PanelContainer6" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer6"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="PanelContainer6/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_hbeb0")
+theme_override_font_sizes/font_size = 25
+text = "Name"
+horizontal_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+texture_filter = 2
+layout_mode = 2
+alignment = 1
+
+[node name="RefundButton" type="Button" parent="HBoxContainer3"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_hbeb0")
+theme_override_font_sizes/font_size = 25
+text = "Refund"
+
+[node name="PanelContainer5" type="PanelContainer" parent="HBoxContainer3"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer3/PanelContainer5"]
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_4h1q0")
+expand_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer3"]
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="PCCost" type="Label" parent="HBoxContainer3/PanelContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_hbeb0")
+theme_override_font_sizes/font_size = 25
+text = "12"
+horizontal_alignment = 1
+
+[node name="PanelContainer6" type="PanelContainer" parent="HBoxContainer3"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer3/PanelContainer6"]
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_1hcci")
+expand_mode = 2
+
+[node name="PanelContainer4" type="PanelContainer" parent="HBoxContainer3"]
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="VPGain" type="Label" parent="HBoxContainer3/PanelContainer4"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_hbeb0")
+theme_override_font_sizes/font_size = 25
+text = "12"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+texture_filter = 2
+layout_mode = 2
+
+[node name="PanelContainer5" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/PanelContainer5"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Picture" type="TextureRect" parent="HBoxContainer/PanelContainer5/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(174, 155)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_l3ebw")
+expand_mode = 2
+
+[node name="SigilDisplay" type="HBoxContainer" parent="HBoxContainer/PanelContainer5/MarginContainer/Picture"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="Description" type="RichTextLabel" parent="HBoxContainer/PanelContainer/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("1_hbeb0")
+theme_override_font_sizes/normal_font_size = 20
+text = "Lorem iptsum"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="KeyCost" type="PanelContainer" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/KeyCost"]
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_w61p6")
+expand_mode = 2
+
+[node name="VorpexCost" type="PanelContainer" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/VorpexCost"]
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_1hcci")
+expand_mode = 2
+
+[node name="PanelContainer4" type="PanelContainer" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="VCCost" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer4"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_hbeb0")
+theme_override_font_sizes/font_size = 24
+text = "12"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+texture_filter = 2
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="UpgradeButton" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_hbeb0")
+theme_override_font_sizes/font_size = 25
+text = "Upgrade"
+
+[node name="ReorderSkillButton" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_hbeb0")
+theme_override_font_sizes/font_size = 25
+text = "Reorder Skills"
+
+[node name="LockedNotification" type="PanelContainer" parent="HBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+
+[node name="VCCost" type="Label" parent="HBoxContainer2/VBoxContainer/LockedNotification"]
+texture_filter = 2
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_hbeb0")
+theme_override_font_sizes/font_size = 24
+text = "[LOCKED: Must be Level 150 and Fusion Grade 6 to unlock.]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SigilMenu" type="HBoxContainer" parent="HBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SigilButton" type="Button" parent="HBoxContainer2/VBoxContainer/SigilMenu"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_hbeb0")
+theme_override_font_sizes/font_size = 25
+text = "Sigils"
+
+[node name="SkillUpgradeButton" type="Button" parent="HBoxContainer2/VBoxContainer/SigilMenu"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_hbeb0")
+theme_override_font_sizes/font_size = 25
+text = "Buce-t Skills"

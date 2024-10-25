@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bi2qq83clj5by"
+path="res://.godot/imported/016. [P3R] Tartarus - Adamah Block.ogg-2afaa50897624040a5d313e0342db240.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/016. [P3R] Tartarus - Adamah Block.ogg"
+dest_files=["res://.godot/imported/016. [P3R] Tartarus - Adamah Block.ogg-2afaa50897624040a5d313e0342db240.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=5.3
+bpm=0.0
+beat_count=0
+bar_beats=4

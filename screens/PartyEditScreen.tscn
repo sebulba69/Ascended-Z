@@ -1,0 +1,127 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw0b6jl4ujkib"]
+
+[ext_resource type="Script" path="res://screens/PartyEditScreen.cs" id="1_74tbd"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_isnm2"]
+[ext_resource type="PackedScene" uid="uid://b5e2ob3gqma0a" path="res://screens/PartyMemberDisplay.tscn" id="2_bur3g"]
+
+[node name="PartyEditScreen" type="HBoxContainer"]
+texture_filter = 2
+script = ExtResource("1_74tbd")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+texture_filter = 2
+layout_mode = 2
+
+[node name="Reserves" type="VBoxContainer" parent="CenterContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/Reserves"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Reserves/PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="PartyLabel" type="Label" parent="CenterContainer/Reserves/PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_isnm2")
+theme_override_font_sizes/font_size = 30
+text = "Reserves"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartyLabel2" type="Label" parent="CenterContainer/Reserves/PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_isnm2")
+theme_override_font_sizes/font_size = 25
+text = "Press Z to add to Party"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Preview" parent="CenterContainer/Reserves/PanelContainer/VBoxContainer" instance=ExtResource("2_bur3g")]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="InReserveMembers" type="ItemList" parent="CenterContainer/Reserves/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(500, 480)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_isnm2")
+theme_override_font_sizes/font_size = 25
+max_text_lines = 10
+fixed_column_width = 1
+
+[node name="GridContainer" type="HBoxContainer" parent="CenterContainer/Reserves"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="CenterContainer/Reserves/GridContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("1_isnm2")
+theme_override_font_sizes/font_size = 30
+text = "[X] Back"
+
+[node name="EmbarkButton" type="Button" parent="CenterContainer/Reserves/GridContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("1_isnm2")
+theme_override_font_sizes/font_size = 30
+text = "[E] Embark"
+
+[node name="InPartyMembers" type="PanelContainer" parent="."]
+texture_filter = 2
+custom_minimum_size = Vector2(500, 400)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="InPartyMembers"]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+
+[node name="InPartyMemberContainer" type="VBoxContainer" parent="InPartyMembers/CenterContainer"]
+layout_mode = 2
+
+[node name="PartyLabel" type="Label" parent="InPartyMembers/CenterContainer/InPartyMemberContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_isnm2")
+theme_override_font_sizes/font_size = 30
+text = "Party"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PM1" parent="InPartyMembers/CenterContainer/InPartyMemberContainer" instance=ExtResource("2_bur3g")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PM2" parent="InPartyMembers/CenterContainer/InPartyMemberContainer" instance=ExtResource("2_bur3g")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PM3" parent="InPartyMembers/CenterContainer/InPartyMemberContainer" instance=ExtResource("2_bur3g")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PM4" parent="InPartyMembers/CenterContainer/InPartyMemberContainer" instance=ExtResource("2_bur3g")]
+unique_name_in_owner = true
+layout_mode = 2

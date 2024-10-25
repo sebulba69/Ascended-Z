@@ -1,0 +1,361 @@
+[gd_scene load_steps=13 format=3 uid="uid://bo4wv12lv7581"]
+
+[ext_resource type="Texture2D" uid="uid://cq8pbliuivvh0" path="res://cg_backgrounds/overworld/004bg00307.jpg" id="2"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="3"]
+[ext_resource type="Script" path="res://screens/MainScreen.cs" id="4"]
+[ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="4_sanap"]
+[ext_resource type="PackedScene" uid="uid://bf7cs0q6o8n8u" path="res://screens/MainPlayerContainer.tscn" id="4_ujo55"]
+[ext_resource type="Script" path="res://misc_icons/Icon.cs" id="6_660s2"]
+[ext_resource type="AudioStream" uid="uid://can6kay0x7j8w" path="res://effects/effect_sounds/Up1.ogg" id="7_n71p5"]
+[ext_resource type="AudioStream" uid="uid://cki5ypqtto4t2" path="res://effects/effect_sounds/Buzzer1.ogg" id="7_oeymu"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k1jt6"]
+load_path = "res://.godot/imported/IconSet.png-956e552ed65fdb8b98f5a12e5c7b39c8.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg1u1"]
+resource_local_to_scene = true
+atlas = SubResource("CompressedTexture2D_k1jt6")
+region = Rect2(96, 384, 32, 32)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8kx40"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmds6"]
+atlas = ExtResource("4_sanap")
+region = Rect2(32, 448, 32, 32)
+
+[node name="MainScreenScene" type="Node2D"]
+texture_filter = 2
+script = ExtResource("4")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+texture_filter = 2
+offset_right = 1511.0
+offset_bottom = 850.0
+
+[node name="Background" type="TextureRect" parent="CenterContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 2
+texture = ExtResource("2")
+expand_mode = 1
+
+[node name="TopRightContainer" type="HBoxContainer" parent="CenterContainer/Background"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -309.0
+offset_bottom = 47.0
+grow_horizontal = 0
+alignment = 2
+
+[node name="MenuButton" type="Button" parent="CenterContainer/Background/TopRightContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+
+[node name="MailboxButton" type="Button" parent="CenterContainer/Background/TopRightContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 30
+text = "Mailbox"
+
+[node name="ChangeRoomButton" type="Button" parent="CenterContainer/Background/TopRightContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 30
+text = "Change Character"
+
+[node name="MusicSelectContainer" type="PanelContainer" parent="CenterContainer/Background/TopRightContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/Background/TopRightContainer/MusicSelectContainer"]
+texture_filter = 2
+layout_mode = 2
+alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="CenterContainer/Background/TopRightContainer/MusicSelectContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3")
+text = "Custom"
+
+[node name="Label" type="Label" parent="CenterContainer/Background/TopRightContainer/MusicSelectContainer/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 35
+text = "♬"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicOptionsButton" type="OptionButton" parent="CenterContainer/Background/TopRightContainer/MusicSelectContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(367, 55)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 35
+alignment = 1
+
+[node name="MainContainer" type="VBoxContainer" parent="CenterContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MainContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="BountyKeyOption" type="VBoxContainer" parent="CenterContainer/MainContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="BountyKeyButton" type="Button" parent="CenterContainer/MainContainer/HBoxContainer/BountyKeyOption"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(280, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+text = "+10 Lab. Floors"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MainContainer/HBoxContainer/BountyKeyOption"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="PanelContainer4" type="PanelContainer" parent="CenterContainer/MainContainer/HBoxContainer/BountyKeyOption/HBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="VorpexCount" type="Label" parent="CenterContainer/MainContainer/HBoxContainer/BountyKeyOption/HBoxContainer/PanelContainer4"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 35
+text = "10"
+horizontal_alignment = 1
+
+[node name="PanelContainer3" type="PanelContainer" parent="CenterContainer/MainContainer/HBoxContainer/BountyKeyOption/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="UpgradeCurrencyIcon" type="TextureRect" parent="CenterContainer/MainContainer/HBoxContainer/BountyKeyOption/HBoxContainer/PanelContainer3"]
+texture_filter = 2
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_pg1u1")
+stretch_mode = 4
+
+[node name="MainPlayerContainer" parent="CenterContainer/MainContainer/HBoxContainer" instance=ExtResource("4_ujo55")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="EmbarkButton" type="Button" parent="CenterContainer/MainContainer/HBoxContainer/MainPlayerContainer"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+text = "Embark"
+
+[node name="ElderKeyOption" type="VBoxContainer" parent="CenterContainer/MainContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="ElderButton" type="Button" parent="CenterContainer/MainContainer/HBoxContainer/ElderKeyOption"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(280, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+text = "+10 Endless Floors"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MainContainer/HBoxContainer/ElderKeyOption"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="PanelContainer4" type="PanelContainer" parent="CenterContainer/MainContainer/HBoxContainer/ElderKeyOption/HBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="VorpexCount" type="Label" parent="CenterContainer/MainContainer/HBoxContainer/ElderKeyOption/HBoxContainer/PanelContainer4"]
+texture_filter = 2
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+text = "1"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/MainContainer/HBoxContainer/ElderKeyOption/HBoxContainer"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="CenterContainer/MainContainer/HBoxContainer/ElderKeyOption/HBoxContainer/PanelContainer"]
+texture_filter = 2
+material = SubResource("ShaderMaterial_8kx40")
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = SubResource("AtlasTexture_rmds6")
+script = ExtResource("6_660s2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MainContainer"]
+texture_filter = 2
+layout_mode = 2
+alignment = 1
+
+[node name="MainFourButtons" type="HBoxContainer" parent="CenterContainer/MainContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="UpgradePartyButton" type="Button" parent="CenterContainer/MainContainer/VBoxContainer/MainFourButtons"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+text = "Upgrade Party"
+
+[node name="FuseButton" type="Button" parent="CenterContainer/MainContainer/VBoxContainer/MainFourButtons"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+text = "Fuse"
+
+[node name="RecruitButton" type="Button" parent="CenterContainer/MainContainer/VBoxContainer/MainFourButtons"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+text = "Recruit"
+
+[node name="SkillTransferButton" type="Button" parent="CenterContainer/MainContainer/VBoxContainer/MainFourButtons"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+text = "Skill Transfer"
+
+[node name="MainFourButtons2" type="HBoxContainer" parent="CenterContainer/MainContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="TrueAscensionButton" type="Button" parent="CenterContainer/MainContainer/VBoxContainer/MainFourButtons2"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+text = "Ascend Past the Barrier Between Worlds"
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/MainContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="Tooltip" type="Label" parent="CenterContainer/MainContainer/PanelContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -15.0
+
+[node name="JingleyJingle" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_n71p5")
+volume_db = -10.0
+
+[node name="WarningPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_oeymu")
+volume_db = -10.0

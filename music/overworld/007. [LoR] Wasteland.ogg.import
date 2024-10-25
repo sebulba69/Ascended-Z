@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtwpe2q0b6xc2"
+path="res://.godot/imported/007. [LoR] Wasteland.ogg-1b998065d61c2a4f246a7f23c151fe95.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/007. [LoR] Wasteland.ogg"
+dest_files=["res://.godot/imported/007. [LoR] Wasteland.ogg-1b998065d61c2a4f246a7f23c151fe95.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=104.94
+bpm=0.0
+beat_count=0
+bar_beats=4

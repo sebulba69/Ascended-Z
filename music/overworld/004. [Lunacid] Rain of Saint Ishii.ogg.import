@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dul6nl78bd4ga"
+path="res://.godot/imported/004. [Lunacid] Rain of Saint Ishii.ogg-8d11ead70ef9e911181fb0fae0cd2b59.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/004. [Lunacid] Rain of Saint Ishii.ogg"
+dest_files=["res://.godot/imported/004. [Lunacid] Rain of Saint Ishii.ogg-8d11ead70ef9e911181fb0fae0cd2b59.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

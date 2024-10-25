@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cttteaucwbocj"
+path="res://.godot/imported/019. [Undertale] Another Medium.ogg-f99a2bfdbe14ad1a5c98924755a79295.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/019. [Undertale] Another Medium.ogg"
+dest_files=["res://.godot/imported/019. [Undertale] Another Medium.ogg-f99a2bfdbe14ad1a5c98924755a79295.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=36.81
+bpm=0.0
+beat_count=0
+bar_beats=4

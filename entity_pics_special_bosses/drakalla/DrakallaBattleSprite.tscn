@@ -1,0 +1,179 @@
+[gd_scene load_steps=13 format=3 uid="uid://b2bpsejaqcs7r"]
+
+[ext_resource type="Texture2D" uid="uid://b1gg00vyx2e6l" path="res://entity_pics_special_bosses/drakalla/Drakalla_Wings.png" id="1_3mfcv"]
+[ext_resource type="Texture2D" uid="uid://chdbdnc3ni0ni" path="res://entity_pics_special_bosses/drakalla/Drakalla_Arm_Right.png" id="2_tead2"]
+[ext_resource type="Texture2D" uid="uid://3j86s543byk8" path="res://entity_pics_special_bosses/drakalla/Drakalla_Body_No_Wings.png" id="3_1fyhe"]
+[ext_resource type="Texture2D" uid="uid://b5fyr7uycjxd8" path="res://entity_pics_special_bosses/drakalla/Drakalla_Head_No_Lower_Mouth.png" id="4_f8iao"]
+[ext_resource type="Texture2D" uid="uid://cj8hcclntdlev" path="res://entity_pics_special_bosses/drakalla/Drakalla_Arm_Left.png" id="4_f23ub"]
+[ext_resource type="Texture2D" uid="uid://cdac4syrdrg1r" path="res://entity_pics_special_bosses/drakalla/Drakalla_Head_Mouth_2.png" id="5_fvdv3"]
+[ext_resource type="Texture2D" uid="uid://dnjenl5v1rrrx" path="res://entity_pics_special_bosses/drakalla/Drakalla_Front_Collar.png" id="6_qdhc4"]
+[ext_resource type="Texture2D" uid="uid://b73vba32umd4m" path="res://entity_pics_special_bosses/drakalla/Drakalla_Head_Mouth_3.png" id="8_umovl"]
+[ext_resource type="Texture2D" uid="uid://dktyph2k5166g" path="res://entity_pics_special_bosses/drakalla/Drakalla_Head_Mouth_1.png" id="9_7b8ho"]
+
+[sub_resource type="Animation" id="Animation_ld8vt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeadMouth:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_umovl")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FrontArm:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(36, -20)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BackArm:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-32, -17)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Wings:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 14)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 553)]
+}
+
+[sub_resource type="Animation" id="Animation_fo18v"]
+resource_name = "drakalla_idle"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeadMouth:texture")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [ExtResource("8_umovl"), ExtResource("5_fvdv3"), ExtResource("9_7b8ho")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FrontArm:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(36, -20), Vector2(19.8, -19.7)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BackArm:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-32, -17), Vector2(-27.032, -17.648)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Wings:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 5), Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(960, 553), Vector2(960, 541)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_thum6"]
+_data = {
+"RESET": SubResource("Animation_ld8vt"),
+"drakalla_idle": SubResource("Animation_fo18v")
+}
+
+[node name="DrakallaBattleSprite" type="Node2D"]
+position = Vector2(960, 553)
+
+[node name="Wings" type="Sprite2D" parent="."]
+position = Vector2(0, 14)
+texture = ExtResource("1_3mfcv")
+
+[node name="BackArm" type="Sprite2D" parent="."]
+position = Vector2(-32, -17)
+texture = ExtResource("2_tead2")
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("3_1fyhe")
+
+[node name="Head(NoMouth)" type="Sprite2D" parent="."]
+texture = ExtResource("4_f8iao")
+
+[node name="HeadMouth" type="Sprite2D" parent="."]
+texture = ExtResource("8_umovl")
+
+[node name="Collar" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("6_qdhc4")
+
+[node name="FrontArm" type="Sprite2D" parent="."]
+position = Vector2(36, -20)
+texture = ExtResource("4_f23ub")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_thum6")
+}
+autoplay = "drakalla_idle"

@@ -1,0 +1,387 @@
+[gd_scene load_steps=25 format=3 uid="uid://dqcbugun0pber"]
+
+[ext_resource type="Script" path="res://screens/cutscene/002. Prologue pt.2/Prologue02.cs" id="1_yr7jh"]
+[ext_resource type="Texture2D" uid="uid://dnm80n7272qoh" path="res://cg_backgrounds/overworld/001bg00501.jpg" id="2_2s8st"]
+[ext_resource type="PackedScene" uid="uid://c8c1fin53mgj3" path="res://screens/cutscene/CutsceneEntity.tscn" id="2_fkxxa"]
+[ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="3_dbf3o"]
+[ext_resource type="Texture2D" uid="uid://c71tn153dkb4o" path="res://screens/cutscene/002. Prologue pt.2/fittotu.png" id="5_fj3jq"]
+[ext_resource type="PackedScene" uid="uid://t6lhru8f8fr7" path="res://effects/EffectSprite.tscn" id="6_kyift"]
+[ext_resource type="Animation" uid="uid://cd6hfw7e8xw" path="res://animations/fade_in_box.res" id="7_3otml"]
+[ext_resource type="AudioStream" uid="uid://ch16cacgytxy4" path="res://screens/cutscene/002. Prologue pt.2/ambient_old_town.ogg" id="7_nlulg"]
+[ext_resource type="Animation" uid="uid://cdlgyu167rbhn" path="res://animations/fade_out_box.res" id="8_bcsag"]
+[ext_resource type="Texture2D" uid="uid://drfelek3hk0g" path="res://screens/cutscene/002. Prologue pt.2/bg01902.jpg" id="8_tt7h2"]
+[ext_resource type="Texture2D" uid="uid://cbnidaohoia4k" path="res://player_pics/conker.png" id="9_nai3l"]
+[ext_resource type="Texture2D" uid="uid://b000qj8oq2gxx" path="res://player_pics/2.png" id="10_khse7"]
+[ext_resource type="Texture2D" uid="uid://bdxpmrsitgt3" path="res://player_pics/spamton.png" id="11_vjnh5"]
+
+[sub_resource type="Animation" id="Animation_qdku8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/AscendedTextbox:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect2/CutsceneEntity:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect2/CutsceneEntity2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TextureRect2/CutsceneEntity3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4jbmx"]
+resource_name = "fade_in_backstory"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_d733a"]
+resource_name = "fade_out_flashback"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mvjtr"]
+resource_name = "fade_out_guy"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CutsceneEntity:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fwqkp"]
+resource_name = "fade_out_the_boys"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2/CutsceneEntity:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect2/CutsceneEntity2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect2/CutsceneEntity3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tdkbs"]
+resource_name = "full_view"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-34, 151), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gi4jh"]
+resource_name = "openingShot"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qkc14"]
+resource_name = "panAwayFromFittotu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.2, 2.2), Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_bd3rc"]
+resource_name = "panToFittotu"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2), Vector2(2.2, 2.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-34, 151), Vector2(-34, 151)]
+}
+
+[sub_resource type="Animation" id="Animation_imp7j"]
+resource_name = "panToFittotu2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-34, 151), Vector2(-19, 156)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0plws"]
+_data = {
+"RESET": SubResource("Animation_qdku8"),
+"fade_in_backstory": SubResource("Animation_4jbmx"),
+"fade_in_box": ExtResource("7_3otml"),
+"fade_out_box": ExtResource("8_bcsag"),
+"fade_out_flashback": SubResource("Animation_d733a"),
+"fade_out_guy": SubResource("Animation_mvjtr"),
+"fade_out_the_boys": SubResource("Animation_fwqkp"),
+"full_view": SubResource("Animation_tdkbs"),
+"openingShot": SubResource("Animation_gi4jh"),
+"panAwayFromFittotu": SubResource("Animation_qkc14"),
+"panToFittotu": SubResource("Animation_bd3rc"),
+"panToFittotu2": SubResource("Animation_imp7j")
+}
+
+[node name="Prologue2" type="Node2D"]
+texture_filter = 2
+script = ExtResource("1_yr7jh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 2
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_2s8st")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="AscendedTextbox" parent="CanvasLayer" instance=ExtResource("3_dbf3o")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+offset_top = -364.0
+
+[node name="CutsceneEntity" parent="." instance=ExtResource("2_fkxxa")]
+unique_name_in_owner = true
+position = Vector2(922, 693)
+texture = ExtResource("5_fj3jq")
+
+[node name="EffectSprite" parent="." instance=ExtResource("6_kyift")]
+unique_name_in_owner = true
+position = Vector2(1351, 634)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+offset = Vector2(960, 540)
+
+[node name="CutscenePlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_0plws")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_nlulg")
+volume_db = -10.0
+
+[node name="CutscenePlayer2" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_0plws")
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 2
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("8_tt7h2")
+metadata/_edit_use_anchors_ = true
+
+[node name="CutsceneEntity" parent="TextureRect2" instance=ExtResource("2_fkxxa")]
+position = Vector2(1339, 615)
+texture = ExtResource("9_nai3l")
+
+[node name="CutsceneEntity2" parent="TextureRect2" instance=ExtResource("2_fkxxa")]
+position = Vector2(576, 621)
+texture = ExtResource("10_khse7")
+
+[node name="CutsceneEntity3" parent="TextureRect2" instance=ExtResource("2_fkxxa")]
+position = Vector2(992, 726)
+texture = ExtResource("11_vjnh5")

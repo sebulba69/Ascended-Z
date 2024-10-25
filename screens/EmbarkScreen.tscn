@@ -1,0 +1,163 @@
+[gd_scene load_steps=6 format=3 uid="uid://ceq36edk6lnnu"]
+
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1"]
+[ext_resource type="Texture2D" uid="uid://cm3mrnrncgbut" path="res://cg_backgrounds/bg00101.jpg" id="1_1dypp"]
+[ext_resource type="Script" path="res://screens/EmbarkScreen.cs" id="2"]
+[ext_resource type="PackedScene" uid="uid://dw0b6jl4ujkib" path="res://screens/PartyEditScreen.tscn" id="3_n6ybj"]
+[ext_resource type="AudioStream" uid="uid://q25xxaiw4e1c" path="res://effects/effect_sounds/Item1.ogg" id="6_4hbko"]
+
+[node name="EmbarkScreen" type="TextureRect"]
+texture_filter = 2
+custom_minimum_size = Vector2(1511, 850)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1dypp")
+script = ExtResource("2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -556.0
+offset_top = -518.5
+offset_right = 556.0
+offset_bottom = 518.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="Tooltip" type="Label" parent="VBoxContainer/PanelContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 25
+text = "Right-click to add a Reserve Member to your Party."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer3" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer3"]
+layout_mode = 2
+alignment = 1
+
+[node name="EndlessDungeonBtn" type="Button" parent="VBoxContainer/PanelContainer3/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "The Endless Dungeon"
+
+[node name="LabribuceBtn" type="Button" parent="VBoxContainer/PanelContainer3/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 30
+text = "The Labrybuce"
+
+[node name="EndAscendedButton" type="Button" parent="VBoxContainer/PanelContainer3/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 30
+text = "End the Ascended Game"
+
+[node name="HBoxContainer" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 63)
+layout_mode = 2
+
+[node name="LeftTier10Btn" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 196.0
+offset_right = 253.0
+offset_bottom = 63.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 30
+text = "<10"
+
+[node name="LeftTierBtn" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 263.0
+offset_right = 296.0
+offset_bottom = 63.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 30
+text = "<"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+offset_left = 306.0
+offset_right = 806.0
+offset_bottom = 63.0
+
+[node name="TierLabel" type="Label" parent="VBoxContainer/HBoxContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightTierBtn" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 816.0
+offset_right = 849.0
+offset_bottom = 63.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 30
+text = ">"
+
+[node name="RightTier10Btn" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 859.0
+offset_right = 916.0
+offset_bottom = 63.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 30
+text = "10>"
+
+[node name="PartyEditScreen" parent="VBoxContainer" instance=ExtResource("3_n6ybj")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ItemSfx" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_4hbko")

@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://bf548jqssig1s"]
+
+[ext_resource type="PackedScene" uid="uid://bqmfi0ome6yn4" path="res://misc_icons/Icon.tscn" id="1_6j4yx"]
+[ext_resource type="Script" path="res://screens/ResistanceDisplay.cs" id="1_r1cvs"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_176ol"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hskqo"]
+load_path = "res://.godot/imported/IconSet.png-956e552ed65fdb8b98f5a12e5c7b39c8.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hm1w2"]
+atlas = SubResource("CompressedTexture2D_hskqo")
+region = Rect2(288, 64, 32, 32)
+
+[node name="ResistanceDisplay" type="Control"]
+texture_filter = 2
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_r1cvs")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Icon" parent="PanelContainer" instance=ExtResource("1_6j4yx")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = SubResource("AtlasTexture_hm1w2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/Icon"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -23.0
+offset_right = 58.0
+offset_bottom = 17.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/normal_font = ExtResource("2_176ol")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = " Wk"
+fit_content = true
+scroll_active = false

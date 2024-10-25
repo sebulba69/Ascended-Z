@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1h6l4ehuhtfw"]
+
+[ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="1_raqmj"]
+[ext_resource type="Script" path="res://statuses/StatusIcon.cs" id="1_rxuhd"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_4nyjt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7w5vx"]
+atlas = ExtResource("1_raqmj")
+region = Rect2(96, 384, 32, 32)
+
+[node name="StatusIcon" type="Control"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1880.0
+offset_bottom = -1040.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rxuhd")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Icon" type="TextureRect" parent="PanelContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_7w5vx")
+
+[node name="Counter" type="Label" parent="PanelContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_4nyjt")
+text = "10"
+horizontal_alignment = 2
+vertical_alignment = 2

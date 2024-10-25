@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjplhdnj3c4fo"]
+
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_2l62j"]
+
+[node name="NewSkillsTutorial" type="PanelContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(500, 500)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("1_2l62j")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "You can fuse two party members together to form a stronger party member by going to the [color=yellow]Fusion Menu[/color] from the main screen.
+
+Fusions rely on your party members' [color=yellow]Fusion Grades[/color]. These start at 0 and go up to 6. Right now, you only have Fusion Grade 1s available to you. Here are the tiers where you unlock the rest of them (all tiers refer to the main dungeon NOT the Labrybuce):
+
+Grade 1: [color=yellow] Tier 16 [/color]
+Grade 2:  [color=yellow]Tier 21 [/color]
+Grade 3:  [color=yellow]Tier 31 [/color]
+Grade 4:  [color=yellow]Tier 41 [/color]
+Grade 5:  [color=yellow]Tier 51 [/color]
+Grade 6:  [color=yellow]Tier 151 [/color]
+
+Fusion Grade 1s can only be made with two Grade 0s. Eveything past that point will follow these recipes:
+
+[color=yellow]Grade 2: 1 Grade 1 + 1 Grade 0
+Grade 3: 1 Grade 2 + 1 Grade 1[/color]
+... and so on ...
+
+Another aspect to Fusion Recipes is that Fusion materials MUST share the same [color=yellow]primary resistance[/color]. For example: A member whose resistance to Dark is [color=lightblue]Rs[/color] can only fuse with another party member whose resistance to Dark is [color=lightblue]Rs[/color]. [color=red]Shared weaknesses do not count. Materials must share a resistance of Rs or higher to fuse[/color]."
+fit_content = true

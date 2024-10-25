@@ -1,0 +1,131 @@
+[gd_scene load_steps=11 format=3 uid="uid://86hlflgnxjcc"]
+
+[ext_resource type="Script" path="res://dungeon_crawling/scenes/DungeonScreen.cs" id="1_7745h"]
+[ext_resource type="PackedScene" uid="uid://djlhy6ga7e5t2" path="res://dungeon_crawling/scenes/DungeonEntity.tscn" id="2_p1r2d"]
+[ext_resource type="Texture2D" uid="uid://dww5loey3m4kp" path="res://cg_backgrounds/dungeon_crawling/bg00701.jpg" id="3_qvvl2"]
+[ext_resource type="AudioStream" uid="uid://b3unft7ukkxtf" path="res://effects/effect_sounds/Battle1.ogg" id="4_fit8f"]
+[ext_resource type="PackedScene" uid="uid://cm0ln1sy56au3" path="res://dungeon_crawling/scenes/crawl_ui/DungeonCrawlUI.tscn" id="5_837pb"]
+[ext_resource type="AudioStream" uid="uid://bd6ue8iwjaduk" path="res://effects/effect_sounds/Heal3.ogg" id="5_xyr8c"]
+[ext_resource type="AudioStream" uid="uid://q25xxaiw4e1c" path="res://effects/effect_sounds/Item1.ogg" id="6_mi2s1"]
+[ext_resource type="AudioStream" uid="uid://d2yakq4delsob" path="res://effects/effect_sounds/Blow1.ogg" id="7_ir4i3"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="8_7q63i"]
+[ext_resource type="PackedScene" uid="uid://5jt6rgufn81k" path="res://dungeon_crawling/scenes/crawl_ui/FloorExitScene.tscn" id="8_m0cb0"]
+
+[node name="DungeonScreen" type="Node2D"]
+script = ExtResource("1_7745h")
+
+[node name="EndBackground" type="TextureRect" parent="."]
+unique_name_in_owner = true
+z_as_relative = false
+texture_filter = 2
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_qvvl2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Player" parent="." instance=ExtResource("2_p1r2d")]
+unique_name_in_owner = true
+z_index = 3
+y_sort_enabled = true
+texture_filter = 2
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+unique_name_in_owner = true
+y_sort_enabled = true
+
+[node name="Background" type="TextureRect" parent="Player/Camera2D"]
+unique_name_in_owner = true
+z_as_relative = false
+texture_filter = 2
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_qvvl2")
+
+[node name="Tiles" type="Marker2D" parent="."]
+unique_name_in_owner = true
+z_index = 1
+z_as_relative = false
+texture_filter = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -10.0
+
+[node name="EncounterSfxPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_fit8f")
+volume_db = -10.0
+
+[node name="HealSfxPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_xyr8c")
+volume_db = -10.0
+
+[node name="ItemSfxPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_mi2s1")
+volume_db = -10.0
+
+[node name="MinePlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_ir4i3")
+volume_db = -10.0
+
+[node name="CrawlUI" type="CanvasLayer" parent="."]
+
+[node name="DungeonCrawlUi" parent="CrawlUI" instance=ExtResource("5_837pb")]
+unique_name_in_owner = true
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CrawlUI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+alignment = 2
+
+[node name="InventoryBtn" type="Button" parent="CrawlUI/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("8_7q63i")
+theme_override_font_sizes/font_size = 50
+text = "[I] Inventory"
+
+[node name="RetreatBtn" type="Button" parent="CrawlUI/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("8_7q63i")
+theme_override_font_sizes/font_size = 50
+text = "[ESC] Retreat"
+
+[node name="Popups" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="FloorExitScene" parent="Popups" instance=ExtResource("8_m0cb0")]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+texture_filter = 2
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]

@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7643e2j4j6ef"]
+
+[ext_resource type="Script" path="res://dungeon_crawling/scenes/crawl_ui/InventoryUI.cs" id="1_rganh"]
+[ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="1_yproq"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_wylqi"]
+[ext_resource type="AudioStream" uid="uid://bd6ue8iwjaduk" path="res://effects/effect_sounds/Heal3.ogg" id="4_e1gwp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16q12"]
+atlas = ExtResource("1_yproq")
+region = Rect2(160, 128, 32, 32)
+
+[node name="InventoryUI" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rganh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="DescriptionPanel" type="PanelContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+
+[node name="ItemDescription" type="Label" parent="VBoxContainer/DescriptionPanel"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_wylqi")
+theme_override_font_sizes/font_size = 25
+text = "Item Description"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ActionListContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="IconContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/ActionListContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="ActionMenuIcon" type="TextureRect" parent="VBoxContainer/PanelContainer/ActionListContainer/IconContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_16q12")
+expand_mode = 2
+
+[node name="ActionMenuSkill" type="Label" parent="VBoxContainer/PanelContainer/ActionListContainer/IconContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_wylqi")
+theme_override_font_sizes/font_size = 25
+text = "test"
+horizontal_alignment = 1
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer/PanelContainer/ActionListContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(450, 350)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_wylqi")
+theme_override_font_sizes/font_size = 25
+allow_search = false
+
+[node name="MenuLabel" type="Label" parent="VBoxContainer/PanelContainer/ActionListContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_wylqi")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_e1gwp")

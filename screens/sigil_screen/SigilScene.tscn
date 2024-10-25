@@ -1,0 +1,149 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnepfoev0injr"]
+
+[ext_resource type="Script" path="res://screens/sigil_screen/SigilScene.cs" id="1_xdnj1"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_mog11"]
+[ext_resource type="Texture2D" uid="uid://4xuhfma1b1c7" path="res://misc_icons/sigil_images/08. almighty_icon.png" id="3_ak27a"]
+[ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="4_3os8q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmy2g"]
+atlas = ExtResource("4_3os8q")
+region = Rect2(320, 608, 32, 32)
+
+[node name="SigilScene" type="Control"]
+texture_filter = 2
+custom_minimum_size = Vector2(348, 433)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 348.0
+offset_bottom = 433.0
+script = ExtResource("1_xdnj1")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+texture_filter = 2
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_mog11")
+theme_override_font_sizes/font_size = 25
+text = "Name box"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+
+[node name="SigilIcon" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(338, 338)
+layout_mode = 2
+texture = ExtResource("3_ak27a")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/SigilIcon"]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 26.0
+theme_override_constants/margin_left = 3
+
+[node name="Level" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer/SigilIcon/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_mog11")
+theme_override_font_sizes/font_size = 25
+text = "[L.2]"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/SigilIcon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 5
+
+[node name="PercentageBoost" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer/SigilIcon/MarginContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_mog11")
+theme_override_font_sizes/font_size = 25
+text = "+12%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+alignment = 1
+
+[node name="UpgradeButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_mog11")
+theme_override_font_sizes/font_size = 30
+text = "Boost"
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_kmy2g")
+expand_mode = 2
+
+[node name="OwnedDellencoin" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_mog11")
+theme_override_font_sizes/font_size = 30
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UnequipButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_mog11")
+theme_override_font_sizes/font_size = 30
+text = "Unequip"

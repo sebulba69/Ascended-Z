@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhukuw57qc6sr"]
+
+[ext_resource type="Script" path="res://screens/RewardScreen.cs" id="1_2fxnw"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_nl3do"]
+
+[node name="RewardScreen" type="Control"]
+texture_filter = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2fxnw")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+texture_filter = 2
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="RewardList" type="ItemList" parent="CenterContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nl3do")
+theme_override_font_sizes/font_size = 50
+
+[node name="ClaimButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_nl3do")
+theme_override_font_sizes/font_size = 50
+text = "Claim Rewards"

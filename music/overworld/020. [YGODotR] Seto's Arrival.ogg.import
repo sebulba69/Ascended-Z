@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b4iupvkgiwsit"
+path="res://.godot/imported/020. [YGODotR] Seto's Arrival.ogg-acfb2b60f83223b0d15c5425cb131120.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/020. [YGODotR] Seto's Arrival.ogg"
+dest_files=["res://.godot/imported/020. [YGODotR] Seto's Arrival.ogg-acfb2b60f83223b0d15c5425cb131120.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=2.31
+bpm=0.0
+beat_count=0
+bar_beats=4

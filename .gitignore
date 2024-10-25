@@ -1,0 +1,39 @@
+# Godot 4+ specific ignores
+.godot/
+.vs/
+.vscode/
+
+# Godot-specific ignores
+.import/*
+export.cfg
+export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+.mono/temp/*
+data_*/
+mono_crash.*.json
+*.vsidx
+*.vsidx
+*.v2
+*.dll
+.godot/editor/editor_layout.cfg
+.godot/mono/temp/obj/Debug/Ascended Z.AssemblyInfo.cs
+.godot/mono/temp/obj/Debug/Ascended Z.AssemblyInfoInputs.cache
+.godot/mono/temp/obj/Debug/Ascended Z.dll
+.godot/mono/temp/obj/Debug/Ascended Z.pdb
+.godot/mono/temp/obj/Debug/Ascended Z.sourcelink.json
+.godot/mono/temp/obj/Debug/ref/Ascended Z.dll
+.godot/mono/temp/obj/Debug/refint/Ascended Z.dll
+.godot/mono/temp/bin/Debug/Ascended Z.pdb
+.godot/mono/temp/bin/Debug/Ascended Z.dll
+.godot/editor/recent_dirs
+.vs/ASCENDED Z/DesignTimeBuild/.dtbcache.v2
+.godot/mono/temp/obj/Debug/Ascended Z.AssemblyInfo.cs
+.godot/mono/temp/obj/Debug/Ascended Z.AssemblyInfoInputs.cache
+.godot/mono/temp/obj/Debug/Ascended Z.assets.cache
+.godot/mono/temp/obj/Debug/Ascended Z.GeneratedMSBuildEditorConfig.editorconfig
+.vs/ASCENDED Z/v17/.suo

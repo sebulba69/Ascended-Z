@@ -1,0 +1,185 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxot4pfsa0qla"]
+
+[ext_resource type="PackedScene" uid="uid://b5e2ob3gqma0a" path="res://screens/PartyMemberDisplay.tscn" id="1_1pkjw"]
+[ext_resource type="Script" path="res://screens/FusionScreen.cs" id="1_ps4ux"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_01pv5"]
+[ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="4_qq27q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ind63"]
+atlas = ExtResource("4_qq27q")
+region = Rect2(32, 288, 32, 32)
+
+[node name="FusionScreen" type="CenterContainer"]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ps4ux")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 2
+layout_mode = 2
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Tooltip" type="Label" parent="VBoxContainer/PanelContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_01pv5")
+theme_override_font_sizes/font_size = 25
+text = "Combine two party members with the same resistances to get a BUCE-T!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="PanelContainer5" type="PanelContainer" parent="VBoxContainer/HBoxContainer2"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer2/PanelContainer5"]
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_ind63")
+expand_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/HBoxContainer2"]
+texture_filter = 2
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="PartyCoinsOwned" type="Label" parent="VBoxContainer/HBoxContainer2/PanelContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_01pv5")
+theme_override_font_sizes/font_size = 35
+text = "12"
+horizontal_alignment = 1
+
+[node name="FusionResult" parent="VBoxContainer" instance=ExtResource("1_1pkjw")]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="FusionMaterials" type="HBoxContainer" parent="VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+alignment = 1
+
+[node name="Material1" parent="VBoxContainer/FusionMaterials" instance=ExtResource("1_1pkjw")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/FusionMaterials"]
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_01pv5")
+theme_override_font_sizes/font_size = 75
+text = "+"
+
+[node name="Material2" parent="VBoxContainer/FusionMaterials" instance=ExtResource("1_1pkjw")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="FusionAndSkillList" type="ItemList" parent="VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_01pv5")
+theme_override_font_sizes/font_size = 30
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SkillsTransferedLabel" type="Label" parent="VBoxContainer/PanelContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_01pv5")
+theme_override_font_sizes/font_size = 35
+text = "Skills Transferred: ???/???"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+alignment = 1
+
+[node name="FuseButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_01pv5")
+theme_override_font_sizes/font_size = 40
+text = "Fuse"
+
+[node name="BackButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_01pv5")
+theme_override_font_sizes/font_size = 40
+text = "Back"
+
+[node name="PanelContainer5" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/PanelContainer5"]
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_ind63")
+expand_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="PartyCoinCost" type="Label" parent="VBoxContainer/HBoxContainer/PanelContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_01pv5")
+theme_override_font_sizes/font_size = 35
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2

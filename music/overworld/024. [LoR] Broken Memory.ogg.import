@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dn7q3sjbwv080"
+path="res://.godot/imported/024. [LoR] Broken Memory.ogg-9f567879445033b51c1ea15a48e82e7f.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/024. [LoR] Broken Memory.ogg"
+dest_files=["res://.godot/imported/024. [LoR] Broken Memory.ogg-9f567879445033b51c1ea15a48e82e7f.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=131.94
+bpm=0.0
+beat_count=0
+bar_beats=4

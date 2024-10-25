@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dwysxm42g1a4h"
+path="res://.godot/imported/002. [KH2] Hollow Bastion.ogg-cb14c73cad26cf4dcc7ad16eb35c364c.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/002. [KH2] Hollow Bastion.ogg"
+dest_files=["res://.godot/imported/002. [KH2] Hollow Bastion.ogg-cb14c73cad26cf4dcc7ad16eb35c364c.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=59.9
+bpm=0.0
+beat_count=0
+bar_beats=4

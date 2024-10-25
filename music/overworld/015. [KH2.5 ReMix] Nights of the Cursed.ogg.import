@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dgaqh4jc6528g"
+path="res://.godot/imported/015. [KH2.5 ReMix] Nights of the Cursed.ogg-59385b4c9bfc70c1061fce1c18f8593d.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/015. [KH2.5 ReMix] Nights of the Cursed.ogg"
+dest_files=["res://.godot/imported/015. [KH2.5 ReMix] Nights of the Cursed.ogg-59385b4c9bfc70c1061fce1c18f8593d.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=113.3
+bpm=0.0
+beat_count=0
+bar_beats=4

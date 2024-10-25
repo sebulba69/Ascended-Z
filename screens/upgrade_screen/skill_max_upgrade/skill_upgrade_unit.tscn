@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://srt2g6f6s1h6"]
+
+[ext_resource type="Script" path="res://screens/upgrade_screen/skill_max_upgrade/SkillUpgradeUnit.cs" id="1_bm6vv"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_mr8qk"]
+[ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="2_acxth"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xeuww"]
+resource_local_to_scene = true
+atlas = ExtResource("2_acxth")
+region = Rect2(0, 1312, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qow6t"]
+atlas = ExtResource("2_acxth")
+region = Rect2(448, 1376, 32, 32)
+
+[node name="SkillUpgradeUnit" type="HBoxContainer"]
+texture_filter = 2
+offset_right = 504.0
+offset_bottom = 49.0
+script = ExtResource("1_bm6vv")
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+texture_filter = 2
+layout_mode = 2
+
+[node name="SkillIcon" type="TextureRect" parent="PanelContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = SubResource("AtlasTexture_xeuww")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+texture_filter = 2
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="SkillDisplayName" type="Label" parent="PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_mr8qk")
+theme_override_font_sizes/font_size = 25
+text = "Skill name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer6" type="PanelContainer" parent="."]
+texture_filter = 2
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer6"]
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_qow6t")
+expand_mode = 2
+
+[node name="PanelContainer4" type="PanelContainer" parent="."]
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="VorpexCost" type="Label" parent="PanelContainer4"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_mr8qk")
+theme_override_font_sizes/font_size = 25
+text = "12"
+horizontal_alignment = 1
+
+[node name="UpgradeButton" type="Button" parent="."]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_mr8qk")
+theme_override_font_sizes/font_size = 30
+text = "Upgrade"

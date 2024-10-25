@@ -1,0 +1,253 @@
+[gd_scene load_steps=7 format=3 uid="uid://cu5quwy1w03eh"]
+
+[ext_resource type="Script" path="res://screens/RecruitCustomScreen.cs" id="1_osff3"]
+[ext_resource type="PackedScene" uid="uid://b5e2ob3gqma0a" path="res://screens/PartyMemberDisplay.tscn" id="1_rorgk"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_yjiyg"]
+[ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="2_rt7db"]
+[ext_resource type="AudioStream" uid="uid://cki5ypqtto4t2" path="res://effects/effect_sounds/Buzzer1.ogg" id="5_ccqvu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jbgh"]
+atlas = ExtResource("2_rt7db")
+region = Rect2(32, 288, 32, 32)
+
+[node name="RecruitCustomScreen" type="CenterContainer"]
+texture_filter = 2
+offset_right = 558.0
+offset_bottom = 777.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_osff3")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+texture_filter = 2
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 2
+
+[node name="Tooltip" type="Label" parent="PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("1_yjiyg")
+theme_override_font_sizes/font_size = 25
+text = "Create a Custom Party Member of your choosing!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartyMemberDisplay" parent="PanelContainer/VBoxContainer" instance=ExtResource("1_rorgk")]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="PreviewSkills" type="CheckBox" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_yjiyg")
+text = "Preview Skills"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="SkillNumber" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("1_yjiyg")
+theme_override_font_sizes/font_size = 30
+text = "Max Number of Skills:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="Description" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/DescContainer"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("1_yjiyg")
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ItemList" type="ItemList" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_yjiyg")
+theme_override_font_sizes/font_size = 25
+same_column_width = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="F0" type="CheckBox" parent="PanelContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yjiyg")
+button_pressed = true
+text = "F0"
+
+[node name="F1" type="CheckBox" parent="PanelContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yjiyg")
+button_pressed = true
+text = "F1"
+
+[node name="F2" type="CheckBox" parent="PanelContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yjiyg")
+button_pressed = true
+text = "F2"
+
+[node name="F3" type="CheckBox" parent="PanelContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yjiyg")
+button_pressed = true
+text = "F3"
+
+[node name="F4" type="CheckBox" parent="PanelContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yjiyg")
+button_pressed = true
+text = "F4"
+
+[node name="F5" type="CheckBox" parent="PanelContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yjiyg")
+button_pressed = true
+text = "F5"
+
+[node name="F6" type="CheckBox" parent="PanelContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yjiyg")
+button_pressed = true
+text = "F6"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/HBoxContainer4"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/HBoxContainer4/PanelContainer"]
+texture_filter = 2
+layout_mode = 2
+texture = SubResource("AtlasTexture_5jbgh")
+expand_mode = 2
+
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/HBoxContainer4"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="OwnedPartyCoin" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/HBoxContainer4/PanelContainer3"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_yjiyg")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="CostLabel" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/PanelContainer2/MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yjiyg")
+theme_override_font_sizes/font_size = 25
+text = "Cost: X VC"
+horizontal_alignment = 1
+
+[node name="BuyButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_yjiyg")
+theme_override_font_sizes/font_size = 30
+text = "Buy"
+
+[node name="BackButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_yjiyg")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[node name="WarningPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_ccqvu")
+volume_db = -10.0

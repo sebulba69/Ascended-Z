@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0kat0p4ji8b"
+path="res://.godot/imported/013. [SMT3] Large Map Real Universe.ogg-d12d9371c13a0d833c6bc8d4bd9fa94e.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/013. [SMT3] Large Map Real Universe.ogg"
+dest_files=["res://.godot/imported/013. [SMT3] Large Map Real Universe.ogg-d12d9371c13a0d833c6bc8d4bd9fa94e.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=27.51
+bpm=0.0
+beat_count=0
+bar_beats=4

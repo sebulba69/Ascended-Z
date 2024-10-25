@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bohwthfhlmwmn"
+path="res://.godot/imported/011. [SMTIV] Ikebukuro Underground District.ogg-a7ed97d2310b3e8bb0855efd3e99ccdc.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/overworld/011. [SMTIV] Ikebukuro Underground District.ogg"
+dest_files=["res://.godot/imported/011. [SMTIV] Ikebukuro Underground District.ogg-a7ed97d2310b3e8bb0855efd3e99ccdc.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=91.79
+bpm=0.0
+beat_count=0
+bar_beats=4

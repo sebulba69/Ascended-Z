@@ -1,0 +1,495 @@
+[gd_scene load_steps=24 format=3 uid="uid://c53r7v7khyrd7"]
+
+[ext_resource type="Script" path="res://screens/full_screen_boss/GhryztitralbhBattleScene.cs" id="1_4rpf7"]
+[ext_resource type="Texture2D" uid="uid://b60wpibspckjn" path="res://cg_backgrounds/dungeon/030.png" id="2_8wakp"]
+[ext_resource type="PackedScene" uid="uid://c15grewugbv3c" path="res://screens/full_screen_boss/FullScreenBossHUD.tscn" id="3_x0fou"]
+[ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="4_qs383"]
+[ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="5_fkdv5"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="6_bja5c"]
+[ext_resource type="Texture2D" uid="uid://car4hgrdysj7x" path="res://turn_icons/turn_backdrop.png" id="7_0ajq3"]
+[ext_resource type="PackedScene" uid="uid://b8adwqax888v1" path="res://screens/ActionMenu.tscn" id="8_jh5ds"]
+[ext_resource type="PackedScene" uid="uid://c2h6ir6s5agpr" path="res://entity_pics_special_bosses/ghryztitralbh/ghryztitralbh_battle_sprite.tscn" id="9_8nlcu"]
+[ext_resource type="PackedScene" uid="uid://t6lhru8f8fr7" path="res://effects/EffectSprite.tscn" id="10_of6s5"]
+[ext_resource type="PackedScene" uid="uid://dwjmhp4570nke" path="res://screens/full_screen_boss/ShakeyCam.tscn" id="11_ah12v"]
+[ext_resource type="PackedScene" uid="uid://cunu4gha5vlbk" path="res://screens/end_screen/EndScreenOptions.tscn" id="12_pwe6y"]
+[ext_resource type="AudioStream" uid="uid://7f0ril5ujtdi" path="res://music/elder_boss_theme/elder_boss_theme.ogg" id="13_28l6m"]
+[ext_resource type="AudioStream" uid="uid://q25xxaiw4e1c" path="res://effects/effect_sounds/Item1.ogg" id="14_uucn2"]
+[ext_resource type="AudioStream" uid="uid://crddlou57jq2k" path="res://music/final_boss_music/netalla_theme.ogg" id="15_sm5rn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtn52"]
+atlas = ExtResource("5_fkdv5")
+region = Rect2(160, 128, 32, 32)
+
+[sub_resource type="Animation" id="Animation_eeod0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.4, 1.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 693)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerUI/PlayerVBoxContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UIElements/FullScreenBossHud:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MusicPlayer:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("13_28l6m")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MusicPlayer:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_jpndp"]
+resource_name = "ghryztit_opening_shot"
+length = 9.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MusicPlayer:stream")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("13_28l6m")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MusicPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 9.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.4, 1.4), Vector2(1.1, 1.1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 9.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(960, 693), Vector2(960, 534)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PlayerUI/PlayerVBoxContainer:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(9.2, 9.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UIElements/FullScreenBossHud:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(9.2, 9.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_af486"]
+resource_name = "netalla_opening_shot"
+length = 15.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(1.2, 1.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 15.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(960, 808), Vector2(960, 554)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MusicPlayer:stream")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_sm5rn")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MusicPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PlayerUI/PlayerVBoxContainer:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(14.9, 15.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UIElements/FullScreenBossHud:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(14.9, 15.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ig7o"]
+_data = {
+"RESET": SubResource("Animation_eeod0"),
+"ghryztit_opening_shot": SubResource("Animation_jpndp"),
+"netalla_opening_shot": SubResource("Animation_af486")
+}
+
+[sub_resource type="Animation" id="Animation_22a18"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rwtkx"]
+resource_name = "bg_fun"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.615686, 0, 0.592157, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ejjxc"]
+_data = {
+"RESET": SubResource("Animation_22a18"),
+"bg_fun": SubResource("Animation_rwtkx")
+}
+
+[node name="GhryztitralbhBattleScene" type="Node2D"]
+script = ExtResource("1_4rpf7")
+
+[node name="Background" type="TextureRect" parent="."]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_8wakp")
+expand_mode = 1
+
+[node name="UIElements" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 2
+
+[node name="FullScreenBossHud" parent="UIElements" instance=ExtResource("3_x0fou")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+
+[node name="AscendedTextbox" parent="UIElements" instance=ExtResource("4_qs383")]
+unique_name_in_owner = true
+visible = false
+
+[node name="PlayerUI" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="PlayerVBoxContainer" type="VBoxContainer" parent="PlayerUI"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -459.0
+offset_top = -667.0
+offset_right = 460.0
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="SkillDisplayIcons" type="PanelContainer" parent="PlayerUI/PlayerVBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CenterContainerIcons" type="CenterContainer" parent="PlayerUI/PlayerVBoxContainer/SkillDisplayIcons"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerUI/PlayerVBoxContainer/SkillDisplayIcons/CenterContainerIcons"]
+layout_mode = 2
+
+[node name="SkillIcon" type="TextureRect" parent="PlayerUI/PlayerVBoxContainer/SkillDisplayIcons/CenterContainerIcons/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = SubResource("AtlasTexture_jtn52")
+
+[node name="SkillName" type="Label" parent="PlayerUI/PlayerVBoxContainer/SkillDisplayIcons/CenterContainerIcons/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_bja5c")
+theme_override_font_sizes/font_size = 22
+
+[node name="TextureRect" type="TextureRect" parent="PlayerUI/PlayerVBoxContainer"]
+self_modulate = Color(1, 1, 1, 0.380392)
+texture_filter = 2
+custom_minimum_size = Vector2(704, 110)
+layout_mode = 2
+size_flags_vertical = 8
+texture = ExtResource("7_0ajq3")
+
+[node name="TurnIconContainer" type="HBoxContainer" parent="PlayerUI/PlayerVBoxContainer/TextureRect"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -566.5
+offset_right = 566.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="PlayerMargins" type="MarginContainer" parent="PlayerUI/PlayerVBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="PlayerStuff" type="HBoxContainer" parent="PlayerUI/PlayerVBoxContainer/PlayerMargins"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="PlayerParty" type="VBoxContainer" parent="PlayerUI/PlayerVBoxContainer/PlayerMargins/PlayerStuff"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+alignment = 1
+
+[node name="PartyPortraits" type="HBoxContainer" parent="PlayerUI/PlayerVBoxContainer/PlayerMargins/PlayerStuff/PlayerParty"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+alignment = 1
+
+[node name="ActionMenu" parent="PlayerUI/PlayerVBoxContainer" instance=ExtResource("8_jh5ds")]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BattleSprite" parent="." instance=ExtResource("9_8nlcu")]
+unique_name_in_owner = true
+position = Vector2(959, 548)
+
+[node name="EffectSprite" parent="BattleSprite" instance=ExtResource("10_of6s5")]
+unique_name_in_owner = true
+use_parent_material = true
+position = Vector2(-2, -101)
+scale = Vector2(1.5, 1.5)
+
+[node name="DamageMarker" type="CenterContainer" parent="BattleSprite"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 350)
+offset_left = -252.0
+offset_top = -284.0
+offset_right = 248.0
+offset_bottom = 66.0
+
+[node name="Camera" parent="." instance=ExtResource("11_ah12v")]
+unique_name_in_owner = true
+position = Vector2(960, 693)
+zoom = Vector2(1.4, 1.4)
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("13_28l6m")
+volume_db = -10.0
+
+[node name="ItemSfxPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("14_uucn2")
+volume_db = -10.0
+
+[node name="OpeningScenePlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_6ig7o")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ejjxc")
+}
+autoplay = "bg_fun"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="EndBox" type="CenterContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(1511, 850)
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+
+[node name="EndVBox" type="VBoxContainer" parent="CanvasLayer/EndBox"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="EndOfBattleLabel" type="Label" parent="CanvasLayer/EndBox/EndVBox"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("6_bja5c")
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndScreenOptions" parent="CanvasLayer/EndBox/EndVBox" instance=ExtResource("12_pwe6y")]
+unique_name_in_owner = true
+layout_mode = 2

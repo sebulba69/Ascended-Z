@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cunu4gha5vlbk"]
+
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_o2fcm"]
+[ext_resource type="Script" path="res://screens/end_screen/EndScreenOptions.cs" id="2_5wpqj"]
+
+[node name="EndScreenOptions" type="ItemList"]
+texture_filter = 2
+custom_minimum_size = Vector2(500, 350)
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_o2fcm")
+theme_override_font_sizes/font_size = 60
+script = ExtResource("2_5wpqj")

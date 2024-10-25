@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://17j6e8uqyix6"]
+
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_nq3vj"]
+
+[node name="NewSkillsTutorial" type="PanelContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(500, 500)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("1_nq3vj")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "You can recruit Fusions from the Recruit Custom Shop if the following conditions are met:
+
+1. The level of the Fusion is its Fusion Grade x10.
+Grade 1 Fusions must be Level 10 or higher,
+Grade 2 Fusions must be Level 20 or higher,
+etc.
+
+2. You do not already own the Fusion you're trying to summon."
+fit_content = true

@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2e8kn5b2n4ey"]
+
+[ext_resource type="PackedScene" uid="uid://b1rmcdko6l2fp" path="res://screens/skill_transfer_screen/PartyMemberTransferSelectScreen.tscn" id="1_1ahyt"]
+[ext_resource type="Script" path="res://screens/skill_transfer_screen/SkillTransferScreen.cs" id="1_cf57f"]
+[ext_resource type="PackedScene" uid="uid://y0ihjyx2hgy2" path="res://screens/skill_transfer_screen/SkillTransferSelectScreen.tscn" id="1_fcdfk"]
+[ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="3_j1kqr"]
+[ext_resource type="AudioStream" uid="uid://cki5ypqtto4t2" path="res://effects/effect_sounds/Buzzer1.ogg" id="5_6trgo"]
+
+[node name="SkillTransferScreen" type="CenterContainer"]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cf57f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 2
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+
+[node name="Tooltip" type="Label" parent="VBoxContainer/PanelContainer2"]
+unique_name_in_owner = true
+texture_filter = 2
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_j1kqr")
+theme_override_font_sizes/font_size = 25
+text = "Transfer your skills between party members!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartyMemberTransferSelectScreen" parent="VBoxContainer" instance=ExtResource("1_1ahyt")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SkillTransferSelectScreen" parent="VBoxContainer" instance=ExtResource("1_fcdfk")]
+unique_name_in_owner = true
+visible = false
+texture_filter = 2
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+alignment = 1
+
+[node name="TransferButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_j1kqr")
+theme_override_font_sizes/font_size = 30
+text = "Transfer"
+
+[node name="BackButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_j1kqr")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[node name="WarningPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_6trgo")
+volume_db = -10.0
