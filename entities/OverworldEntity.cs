@@ -51,7 +51,7 @@ namespace AscendedZ.entities.partymember_objects
         { 
             get 
             {
-                int refund = (int)(VorpexValue * 0.03) + 1;
+                int refund = (int)(VorpexValue * 0.03);
                 refund += (FusionGrade * 2);
 
                 return refund;
