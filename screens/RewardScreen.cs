@@ -13,7 +13,7 @@ public partial class RewardScreen : Control
 	private Button _claimRewardsButton;
 	private List<Currency> _rewards;
     private GameObject _gameObject;
-
+    private int tier;
     private const int REWARD_MULTIPLIER = 7;
 
     private Random _rand;
@@ -54,7 +54,7 @@ public partial class RewardScreen : Control
 
     public void InitializeSMTRewards()
     {
-        int tier = _gameObject.Tier;
+        tier = _gameObject.Tier;
         int startingValue = 7;
         if(tier > TierRequirements.TIER6_STRONGER_ENEMIES)
             startingValue += tier/10;
@@ -75,7 +75,7 @@ public partial class RewardScreen : Control
 
     public void InitializeDungeonCrawlEncounterRewards()
     {
-        int tier = _gameObject.TierDC;
+        tier = _gameObject.TierDC;
         _rewards = new List<Currency>()
         {
             new Vorpex() { Amount = tier * GetMultiplier(tier, REWARD_MULTIPLIER) },
@@ -88,7 +88,7 @@ public partial class RewardScreen : Control
 
     public void InitializeBountyRewards()
     {
-        int tier = _gameObject.TierDC;
+        tier = _gameObject.TierDC;
         _rewards = new List<Currency>()
         {
             new Vorpex() { Amount = tier * GetMultiplier(tier, REWARD_MULTIPLIER + 2) },
@@ -102,7 +102,7 @@ public partial class RewardScreen : Control
 
     public void InitializeDungeonCrawlEncounterSpecialRewards()
     {
-        int tier = _gameObject.TierDC;
+        tier = _gameObject.TierDC;
         _rewards = new List<Currency>()
         {
             new Vorpex() { Amount = tier * GetMultiplier(tier, (REWARD_MULTIPLIER - 1)) },
@@ -115,7 +115,7 @@ public partial class RewardScreen : Control
 
     public void InitializeDungeonCrawlEncounterSpecialBossRewards()
     {
-        int tier = _gameObject.TierDC;
+        tier = _gameObject.TierDC;
         _rewards = new List<Currency>()
         {
             new Vorpex() { Amount = (tier + 10) * GetMultiplier(tier, (REWARD_MULTIPLIER + 5)) },
@@ -128,7 +128,7 @@ public partial class RewardScreen : Control
 
     public void InitializeDungeonCrawlTierRewards()
     {
-        int tier = _gameObject.TierDC;
+        tier = _gameObject.TierDC;
         _rewards = RewardsCalculator.GetDungeonCrawlCompletionRewards(tier);
         LabrybuceTax();
         SetupRewards();
@@ -136,7 +136,7 @@ public partial class RewardScreen : Control
 
     public void RandomizeDungeonCrawlRewards()
     {
-        int tier = _gameObject.TierDC;
+        tier = _gameObject.TierDC;
         var rewards = new List<Currency>()
         {
             new Vorpex() { Amount = tier * GetMultiplier(tier, (REWARD_MULTIPLIER - 2)) },
@@ -151,7 +151,7 @@ public partial class RewardScreen : Control
 
     public void InitializeDungeonCrawlSpecialItems()
     {
-        int tier = _gameObject.TierDC;
+        tier = _gameObject.TierDC;
 
         _rewards = new List<Currency>()
         {
@@ -166,11 +166,28 @@ public partial class RewardScreen : Control
 
     private void LabrybuceTax()
     {
+        HashSet<string> currencies = new HashSet<string>() 
+        {
+            SkillAssets.KEY_SHARD, SkillAssets.BOUNTY_KEY, SkillAssets.ELDER_KEY_ICON,
+            SkillAssets.PROOF_OF_ASCENSION_ICON, SkillAssets.PROOF_OF_BUCE_ICON
+        };
+
+        double percentage = 0.5;
+
+        if(tier >= 50)
+        {
+            percentage += (tier / 50) * 0.1;
+        }
+
         foreach (var reward in _rewards)
         {
-            reward.Amount /= 2;
-            if (reward.Amount == 0)
-                reward.Amount = 1;
+            if (!currencies.Contains(reward.Name))
+            {
+                reward.Amount = (int)(reward.Amount * percentage);
+                if (reward.Amount == 0)
+                    reward.Amount = 1;
+            }
+
         }
             
     }

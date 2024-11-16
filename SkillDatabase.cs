@@ -1221,7 +1221,7 @@ namespace AscendedZ
         {
             get
             {
-                var status = MakeStatusSkill("Buff Boost", new DebuffBoostStatus());
+                var status = MakeStatusSkill("Debuff Boost", new DebuffBoostStatus());
                 status.Icon = SkillAssets.DEBUFF_BOOST_ICON;
                 status.EndupAnimation = SkillAssets.FLAT_DEBUFF;
                 status.TargetType = TargetTypes.OPP_ALL;
