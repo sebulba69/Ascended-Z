@@ -90,29 +90,33 @@ volume_db = -10.0
 unique_name_in_owner = true
 mouse_filter = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CrawlUI"]
+[node name="InventoryBtn" type="Button" parent="CrawlUI"]
+unique_name_in_owner = true
+texture_filter = 2
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 40.0
+offset_top = -71.0
+offset_right = 238.0
 grow_vertical = 0
-alignment = 2
-
-[node name="InventoryBtn" type="Button" parent="CrawlUI/VBoxContainer"]
-unique_name_in_owner = true
-texture_filter = 2
-layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("8_7q63i")
 theme_override_font_sizes/font_size = 50
 text = "[I] Inventory"
 
-[node name="RetreatBtn" type="Button" parent="CrawlUI/VBoxContainer"]
+[node name="RetreatBtn" type="Button" parent="CrawlUI"]
 unique_name_in_owner = true
 texture_filter = 2
-layout_mode = 2
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -238.0
+offset_top = -71.0
+grow_horizontal = 0
+grow_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("8_7q63i")

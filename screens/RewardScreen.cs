@@ -172,11 +172,11 @@ public partial class RewardScreen : Control
             SkillAssets.PROOF_OF_ASCENSION_ICON, SkillAssets.PROOF_OF_BUCE_ICON
         };
 
-        double percentage = 0.5;
+        double percentage = 0.75;
 
-        if(tier >= 50)
+        if(tier >= 25)
         {
-            percentage += (tier / 50) * 0.1;
+            percentage += (tier / 25) * 0.1;
         }
 
         foreach (var reward in _rewards)

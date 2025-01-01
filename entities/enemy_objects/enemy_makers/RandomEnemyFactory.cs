@@ -196,7 +196,7 @@ namespace AscendedZ.entities.enemy_objects.enemy_makers
             if (go.RandomBossIndex >= _bossNames.Count)
                 go.RandomBossIndex = 0;
 
-            int turns = _rng.Next(3, 6);
+            int turns = _rng.Next(2, 4);
 
             var bhai = MakeBossHellAI(name, turns);
             bhai.MaxHP = EntityDatabase.GetBossHPRandom(tier);
