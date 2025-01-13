@@ -236,8 +236,10 @@ namespace AscendedZ.entities.enemy_objects.enemy_makers
             }
 
             int addOtherAilments = _rng.Next(1, 101);
-            if (addOtherAilments <= 55)
+            if (addOtherAilments <= 55 && tier >= 50)
+            {
                 bhai.Skills.Add(_miscStatuses[_rng.Next(_miscStatuses.Count)].Clone());
+            }
 
             int skills;
             if(turns % 2 == 0)
