@@ -896,6 +896,9 @@ public partial class DungeonScreen : Transitionable2DScene
         if (!_prematurelyLeave)
         {
             // _endBackground.Visible = false;
+            if (_dungeon.FloorType == FloorTypes.Tikki)
+                _gameObject.DefeatedTikkis.Remove(_gameObject.TierDC);
+
             IncrementMaxTier();
             var rewards = _rewardScene.Instantiate<RewardScreen>();
             _popup.AddChild(rewards);
