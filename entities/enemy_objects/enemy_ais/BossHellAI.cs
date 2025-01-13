@@ -21,6 +21,7 @@ namespace AscendedZ.entities.enemy_objects.enemy_ais
     {
         private int _move;
         private int _wexHitCount;
+        private bool _useVoid = true;
 
         public BossHellAI() : base()
         {
@@ -35,7 +36,11 @@ namespace AscendedZ.entities.enemy_objects.enemy_ais
             BattleResult result = base.ApplyElementSkill(user, skill);
 
             if (result.ResultType == BattleResultType.Wk)
+            {
                 _wexHitCount++;
+                _useVoid = _wexHitCount >= 3;
+            }
+                
 
             return result;
         }
@@ -97,12 +102,13 @@ namespace AscendedZ.entities.enemy_objects.enemy_ais
         {
             var status = skill.Status;
 
-            if(StatusHandler.HasStatus(status.Id) || _wexHitCount < 3)
+            if(StatusHandler.HasStatus(status.Id) || !_useVoid)
             {
                 return null;
             }
             else
             {
+                _useVoid = false;
                 return this;
             }
         }
