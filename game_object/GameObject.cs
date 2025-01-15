@@ -124,6 +124,7 @@ namespace AscendedZ.game_object
         /// Tier, List of names
         /// </summary>
         public Dictionary<int, HashSet<string>> DefeatedTikkis { get; set; }
+        public HashSet<int> DefeatedGoldBoss { get; set; }
         public Dictionary<int, HashSet<string>> DiscoveredFusions { get; set; }
         public HashSet<string> ImportantFights { get; set; }
         public List<bool> Checkboxes { get; set; }
@@ -139,6 +140,7 @@ namespace AscendedZ.game_object
             RandomizedBossEncounters = new Dictionary<int, Enemy>();
             TikkiBosses = new();
             DefeatedTikkis = new();
+            DefeatedGoldBoss = new();
             ImportantFights = new();
             Mail = new Mailbox();
 

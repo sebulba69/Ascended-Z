@@ -70,8 +70,9 @@ public partial class UpgradeItem : VBoxContainer
 		_refundRewardPC.Text = $"{entity.RefundReward:n0}";
 		_refundRewardVC.Text = $"{entity.RefundRewardVC:n0}";
         _description.Text = entity.GetUpgradeString();
+        _upgradeBtn.Text = "Upgrade";
 
-		if (entity.IsLevelCapHit)
+        if (entity.IsLevelCapHit)
 		{
 			_upgradeBtn.Disabled = true;
 			if (_go.ProgressFlagObject.EndgameUnlocked)
@@ -82,6 +83,19 @@ public partial class UpgradeItem : VBoxContainer
 				GetNode<PanelContainer>("%VorpexCost").Visible = false;
 				GetNode<PanelContainer>("%KeyCost").Visible = true;
 				_upgradeBtn.Disabled = !entity.CanBoostHP();
+            }
+        }
+		else
+		{
+            int softCap = MiscGlobals.GetSoftcap();
+            if (entity.Level + 1 >= softCap)
+            {
+                _upgradeBtn.Disabled = true;
+				_upgradeBtn.Text = $"Capped: {softCap}";
+			}
+			else
+			{
+                _upgradeBtn.Disabled = false;
             }
         }
 		

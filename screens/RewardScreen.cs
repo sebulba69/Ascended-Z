@@ -14,7 +14,22 @@ public partial class RewardScreen : Control
 	private List<Currency> _rewards;
     private GameObject _gameObject;
     private int tier;
+   
     private const int REWARD_MULTIPLIER = 7;
+
+    private int Multiplier
+    {
+        get
+        {
+            if (_gameObject == null)
+                return REWARD_MULTIPLIER;
+
+            int t = _gameObject.Tier;
+            int multiplier = REWARD_MULTIPLIER - 1;
+
+            return multiplier + (int)((t * 0.05) + 1);
+        }
+    }
 
     private Random _rand;
 
@@ -57,7 +72,7 @@ public partial class RewardScreen : Control
         tier = _gameObject.Tier;
         int startingValue = 7;
         if(tier > TierRequirements.TIER6_STRONGER_ENEMIES)
-            startingValue += tier/10;
+            startingValue += tier/5;
 
         _rewards = new List<Currency>()
         {
@@ -70,6 +85,7 @@ public partial class RewardScreen : Control
             _rewards.Add(new Dellencoin() { Amount = GetMultiplier(tier, REWARD_MULTIPLIER) * tier });
         }
 
+        LabrybuceTax();
         SetupRewards();
     }
 
@@ -172,12 +188,7 @@ public partial class RewardScreen : Control
             SkillAssets.PROOF_OF_ASCENSION_ICON, SkillAssets.PROOF_OF_BUCE_ICON
         };
 
-        double percentage = 0.75;
-
-        if(tier >= 25)
-        {
-            percentage += (tier / 25) * 0.1;
-        }
+        double percentage = 0.75 + (tier * 0.05);
 
         foreach (var reward in _rewards)
         {

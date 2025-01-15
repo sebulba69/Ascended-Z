@@ -623,6 +623,7 @@ public partial class DungeonScreen : Transitionable2DScene
                     if (id == TileEventId.SpecialBossEncounter)
                     {
                         _gameObject.RandomizedBossEncounters.Remove(tier);
+                        _gameObject.DefeatedGoldBoss.Add(tier);
                     }
 
                     _dungeon.ProcessAction(id);
@@ -842,6 +843,11 @@ public partial class DungeonScreen : Transitionable2DScene
             _gameObject.DefeatedTikkis.Remove(_gameObject.TierDC);
         }
 
+        if(_dungeon.FloorType == FloorTypes.GoldBoss)
+        {
+            _gameObject.DefeatedGoldBoss.Remove(_gameObject.TierDC);
+        }
+
         IncrementMaxTier();
 
         if (CutsceneAssets.StartLabrybuceFloor.ContainsKey(_gameObject.TierDC) && !_gameObject.CutsceneObject.StartOfLabrybuceWatched.Contains(_gameObject.TierDC))
@@ -898,6 +904,11 @@ public partial class DungeonScreen : Transitionable2DScene
             // _endBackground.Visible = false;
             if (_dungeon.FloorType == FloorTypes.Tikki)
                 _gameObject.DefeatedTikkis.Remove(_gameObject.TierDC);
+
+            if (_dungeon.FloorType == FloorTypes.GoldBoss)
+            {
+                _gameObject.DefeatedGoldBoss.Remove(_gameObject.TierDC);
+            }
 
             IncrementMaxTier();
             var rewards = _rewardScene.Instantiate<RewardScreen>();

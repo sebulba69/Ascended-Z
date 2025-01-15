@@ -20,7 +20,7 @@ namespace AscendedZ.skills
             {
                 int cap = 300;
                 if (PersistentGameObjects.GameObjectInstance().ProgressFlagObject.EndgameUnlocked)
-                    cap = 500;
+                    cap = 450;
 
                 return cap;
             }

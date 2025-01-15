@@ -305,15 +305,22 @@ namespace AscendedZ.dungeon_crawling.backend
             }
             else if(_floorType == FloorTypes.GoldBoss)
             {
-                RequiredFloorActions = 1;
-                _requiredFloorString = "Gold Door: ";
+                if (!PersistentGameObjects.GameObjectInstance().DefeatedGoldBoss.Contains(_tier))
+                {
+                    RequiredFloorActions = 1;
+                    _requiredFloorString = "Gold Door: ";
 
-                var boss = openTiles[_rng.Next(openTiles.Count)];
-                SetTileToSpecialBossEncounter(boss);
-                generatedPathTypes.Add(boss.TileEventId);
-                openTiles.Remove(boss);
+                    var boss = openTiles[_rng.Next(openTiles.Count)];
+                    SetTileToSpecialBossEncounter(boss);
+                    generatedPathTypes.Add(boss.TileEventId);
+                    openTiles.Remove(boss);
 
-                AddAdjacentWall(boss, length);
+                    AddAdjacentWall(boss, length);
+                }
+                else
+                {
+                    CanExit = true;
+                }
             }
             else
             {
