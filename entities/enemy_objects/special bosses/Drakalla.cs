@@ -93,7 +93,7 @@ namespace AscendedZ.entities.enemy_objects.special_bosses
         {
             Name = EnemyNames.Drakalla;
             Image = CharacterImageAssets.GetImagePath(Name);
-            MaxHP = 15000;
+            MaxHP = 16000;
             Turns = 2;
             _isBoss = true;
 

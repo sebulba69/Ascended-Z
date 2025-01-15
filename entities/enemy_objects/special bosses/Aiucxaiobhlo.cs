@@ -23,7 +23,7 @@ namespace AscendedZ.entities.enemy_objects.special_bosses
         {
             Name = EnemyNames.Aiucxaiobhlo;
             Image = CharacterImageAssets.GetImagePath(Name);
-            MaxHP = 10000;
+            MaxHP = 12000;
             _isBoss = true;
             Turns = 4;
             _turnCount = 3;

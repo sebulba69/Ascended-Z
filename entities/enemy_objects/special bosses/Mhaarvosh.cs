@@ -23,7 +23,7 @@ namespace AscendedZ.entities.enemy_objects.special_bosses
         {
             Name = EnemyNames.Mhaarvosh;
             Image = CharacterImageAssets.GetImagePath(Name);
-            MaxHP = 8000;
+            MaxHP = 10000;
             Turns = 3;
             _isBoss = true;
             _startOfTurnScript = true;

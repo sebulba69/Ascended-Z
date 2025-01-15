@@ -43,7 +43,7 @@ namespace AscendedZ.entities.enemy_objects.special_bosses
         {
             Name = EnemyNames.Yacnacnalb;
             Image = CharacterImageAssets.GetImagePath(Name);
-            MaxHP = 7000;
+            MaxHP = 9000;
             Turns = 3;
             _isBoss = true;
 

@@ -56,7 +56,7 @@ namespace AscendedZ.entities.enemy_objects.special_bosses
         {
             Name = EnemyNames.Ghryztitralbh;
             Image = CharacterImageAssets.GetImagePath(Name);
-            MaxHP = 11000;
+            MaxHP = 13000;
             Turns = 3;
             _isBoss = true;
             _battleStart = true;
