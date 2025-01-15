@@ -9,6 +9,7 @@ using AscendedZ.skills;
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 
 public partial class SkillUpgradeUnit : HBoxContainer
 {
@@ -50,20 +51,25 @@ public partial class SkillUpgradeUnit : HBoxContainer
 	private void SetSkillDisplay()
 	{
         _bp = _entity.MakeBattlePlayerBase();
-		int modifier = 0;
+
 		_cap = 999;
+		int modifier = 0;
 		if(_bp.Skills[_skillIndex].Id == SkillId.Elemental)
 		{
 			var element = (ElementSkill)_bp.Skills[_skillIndex];
-			_cap = element.Cap;
+			modifier = element.Level;
+
+            _cap = element.Cap;
         }
 		else if (_bp.Skills[_skillIndex].Id == SkillId.Healing)
 		{
             var heal = (HealSkill)_bp.Skills[_skillIndex];
+			modifier = heal.Level;
+
 			_cap = heal.Cap;
         }
 
-        _cost = _entity.VorpexValue + modifier;
+		_cost = Equations.GetVorpexLevelValue(_entity.VorpexValue + modifier, modifier);
         _costLabel.Text = _cost.ToString();
         if (_skill.Level >= _cap)
 		{

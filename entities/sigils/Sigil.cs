@@ -38,8 +38,6 @@ namespace AscendedZ.entities.sigils
             Level++;
 
             LevelUpCost = Equations.GetVorpexLevelValue(LevelUpCost, Level);
-            if (LevelUpCost > 3000)
-                LevelUpCost = 3000;
 
             _boostPercentage += 0.01;
             _boostPercentage = Math.Round(_boostPercentage, 2); // avoid weird floating point math
