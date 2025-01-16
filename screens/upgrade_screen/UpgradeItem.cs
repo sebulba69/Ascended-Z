@@ -91,7 +91,7 @@ public partial class UpgradeItem : VBoxContainer
             if (entity.Level + 1 >= softCap)
             {
                 _upgradeBtn.Disabled = true;
-				_upgradeBtn.Text = $"Capped: {softCap}";
+				_upgradeBtn.Text = $"Capped: {softCap - 1}";
 			}
 			else
 			{

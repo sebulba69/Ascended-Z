@@ -18,8 +18,13 @@ namespace AscendedZ.skills
         {
             get
             {
+                var go = PersistentGameObjects.GameObjectInstance();
+
                 int cap = 300;
-                if (PersistentGameObjects.GameObjectInstance().ProgressFlagObject.EndgameUnlocked)
+                if(go.MaxTier < 250)
+                    cap = MiscGlobals.GetSoftcap() - 1;
+
+                if (go.ProgressFlagObject.EndgameUnlocked)
                     cap = 450;
 
                 return cap;

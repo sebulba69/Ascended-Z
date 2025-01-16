@@ -17,16 +17,16 @@ namespace AscendedZ
 
             // level cap
             if (maxTier >= 150)
-                return 150;
+                return 151;
 
             if (maxTier <= 10)
-                return 10;
+                return 11;
 
             int remainder = maxTier % 10;
 
             int softCap = maxTier - remainder;
 
-            return softCap + 10;
+            return softCap + 11;
         }
     }
 }

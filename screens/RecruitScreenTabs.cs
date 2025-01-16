@@ -57,10 +57,10 @@ public partial class RecruitScreenTabs : CenterContainer
             _shopLevelButton.Text = "MAX LEVEL";
         }
 
-        if (gameObject.ShopLevel >= MiscGlobals.GetSoftcap())
+        if (gameObject.ShopLevel >= MiscGlobals.GetSoftcap() - 1)
         {
             _shopLevelButton.Disabled = true;
-            _shopLevelButton.Text = $"CAPPED ({MiscGlobals.GetSoftcap()})";
+            _shopLevelButton.Text = $"CAPPED ({MiscGlobals.GetSoftcap() - 1})";
         }
 
         _ownedDellencoin.Text = $"{gameObject.MainPlayer.Wallet.Currency[SkillAssets.DELLENCOIN].Amount:n0} D$";
@@ -87,10 +87,10 @@ public partial class RecruitScreenTabs : CenterContainer
 				_shopLevelButton.Text = "MAX LEVEL";
 			}
 
-            if (gameObject.ShopLevel >= MiscGlobals.GetSoftcap())
+            if (gameObject.ShopLevel >= MiscGlobals.GetSoftcap() - 1)
             {
                 _shopLevelButton.Disabled = true;
-                _shopLevelButton.Text = $"CAPPED ({MiscGlobals.GetSoftcap()})";
+                _shopLevelButton.Text = $"CAPPED ({MiscGlobals.GetSoftcap() - 1})";
             }
         }
     }

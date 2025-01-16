@@ -75,7 +75,10 @@ public partial class SkillUpgradeUnit : HBoxContainer
 		{
 			_skillDisplayName.Text = _bp.Skills[_skillIndex].GetBattleDisplayString();
 			_upgradeButton.Disabled = true;
-			_upgradeButton.Text = "[MAX]";
+			if (PersistentGameObjects.GameObjectInstance().MaxTier < 250)
+				_upgradeButton.Text = "[SOFT CAP]";
+			else
+				_upgradeButton.Text = "[MAX]";
 		}
 		else
 		{

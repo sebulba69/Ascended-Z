@@ -14,7 +14,7 @@ using System.Xml.Linq;
 
 public partial class StartScreen : Transitionable2DScene
 {
-	private readonly string VERSION = "Version 1.0.9";
+	private readonly string VERSION = "Version 1.0.10";
 
 	/// <summary>
 	/// Node that appears on the starting screen.
