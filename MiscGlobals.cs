@@ -24,9 +24,16 @@ namespace AscendedZ
 
             int remainder = maxTier % 10;
 
-            int softCap = maxTier - remainder;
+            if (remainder == 0)
+            {
+                return maxTier + 1;
+            }
+            else
+            {
+                int softCap = maxTier - remainder;
 
-            return softCap + 11;
+                return softCap + 11;
+            }
         }
     }
 }

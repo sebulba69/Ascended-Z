@@ -68,13 +68,9 @@ namespace AscendedZ.skills
                 {
                     name = _baseName;
                 }
-                else if(_level > 0 && _level < Cap)
-                {
-                    name = $"{_baseName} +{_level}";
-                }
                 else
                 {
-                    name = $"{_baseName} +MAX";
+                    name = $"{_baseName} +{_level}";
                 }
 
                 if (_piercing)

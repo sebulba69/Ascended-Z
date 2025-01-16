@@ -43,10 +43,7 @@ namespace AscendedZ.skills
                 if (_level == 0)
                     return _baseName;
                 else
-                    if (_level < Cap)
                     return $"{_baseName} +{_level}";
-                else
-                    return $"{_baseName} +MAX";
             }
         }
 
