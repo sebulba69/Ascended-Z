@@ -54,6 +54,7 @@ public partial class SkillUpgradeUnit : HBoxContainer
 
 		_cap = 999;
 		int modifier = 0;
+		bool healing = false;
 		if(_bp.Skills[_skillIndex].Id == SkillId.Elemental)
 		{
 			var element = (ElementSkill)_bp.Skills[_skillIndex];
@@ -65,13 +66,13 @@ public partial class SkillUpgradeUnit : HBoxContainer
 		{
             var heal = (HealSkill)_bp.Skills[_skillIndex];
 			modifier = heal.Level;
-
-			_cap = heal.Cap;
+			healing = true;
+            _cap = heal.Cap;
         }
 
 		_cost = Equations.GetVorpexLevelValue(_entity.VorpexValue + modifier, modifier);
         _costLabel.Text = _cost.ToString();
-        if (_skill.Level >= _cap)
+        if (_skill.Level >= _cap && !healing)
 		{
 			_skillDisplayName.Text = _bp.Skills[_skillIndex].GetBattleDisplayString();
 			_upgradeButton.Disabled = true;
