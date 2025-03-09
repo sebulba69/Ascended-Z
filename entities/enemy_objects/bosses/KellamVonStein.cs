@@ -45,6 +45,9 @@ namespace AscendedZ.entities.enemy_objects.bosses
         {
             EnemyAction action = new EnemyAction();
 
+            if (battleSceneObject.AlivePlayers.Count == 1)
+                _phase = 2;
+
             switch (_phase)
             {
                 case 0:
