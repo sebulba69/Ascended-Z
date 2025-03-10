@@ -111,7 +111,7 @@ namespace AscendedZ.entities.enemy_objects.special_bosses
             SetElementalResistances();
             Resistances.HideResistances = false;
 
-            Description = $"{Name}: Will use elemental skills in the following order {string.Join(", ", _elements)}. You must hit its weakness every turn or else you die.";
+            Description = $"{Name}: Will use the opposite elemental skills in the following order Ice, Fire, Wind, Elec, Light, Dark. You must hit its weakness every turn or else you die.";
         }
 
         public override BattleResult ApplyElementSkill(BattleEntity user, ElementSkill skill)
