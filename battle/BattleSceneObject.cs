@@ -74,7 +74,7 @@ namespace AscendedZ.battle
             {
                 if (PersistentGameObjects.GameObjectInstance().ProgressFlagObject.EndgameUnlocked && !dungeonCrawlEncounter && tier >= 251)
                 {
-                    tier += 55;
+                    tier += 60;
                 }
 
                 Enemies = EntityDatabase.MakeBattleEncounter(tier, dungeonCrawlEncounter);
