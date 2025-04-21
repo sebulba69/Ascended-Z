@@ -68,6 +68,9 @@ public partial class EntityDisplayBox : PanelContainer
             float x = _randomNumberGenerator.RandfRange(-_shakeParameters.ShakeValue, _shakeParameters.ShakeValue);
             float y = _randomNumberGenerator.RandfRange(-_shakeParameters.ShakeValue, _shakeParameters.ShakeValue);
             this.Position = new Vector2(_x + x, y);
+
+            if (_shakeParameters.ShakeValue < 1 && _shakeParameters.ShakeValue > 0)
+                _shakeParameters.ShakeValue = 0;
         }
         else
         {
