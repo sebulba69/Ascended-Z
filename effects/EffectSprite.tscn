@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://relkpnc32hm1" path="res://effects/effect_art/Magic1.png" id="1_pwjhv"]
 [ext_resource type="Texture2D" uid="uid://b04xvtb1djnnr" path="res://effects/effect_art/Ice1.png" id="1_tridh"]
 [ext_resource type="Texture2D" uid="uid://cf5sh7sexcjo3" path="res://effects/effect_art/Darkness3.png" id="1_wnaou"]
-[ext_resource type="Script" path="res://effects/EffectAnimation.cs" id="2_hloep"]
+[ext_resource type="Script" uid="uid://12ll25daotu3" path="res://effects/EffectAnimation.cs" id="2_hloep"]
 [ext_resource type="Texture2D" uid="uid://cnj3rxq0uollk" path="res://effects/effect_art/Wind3.png" id="3_2edc2"]
 [ext_resource type="Texture2D" uid="uid://7rhgtk6mi8n2" path="res://effects/effect_art/Recovery1.png" id="21_0cca3"]
 [ext_resource type="Texture2D" uid="uid://baor3cd2pmwjb" path="res://effects/effect_art/PreSpecial3.png" id="22_68gop"]
@@ -2241,41 +2241,41 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jp8tl"]
 _data = {
-"RESET": SubResource("Animation_01a3m"),
-"agro": SubResource("Animation_3oog8"),
-"almighty_all": SubResource("Animation_om584"),
-"atk_buff": SubResource("Animation_uy4wm"),
-"bind": SubResource("Animation_t3tu8"),
-"dark1": SubResource("Animation_ymssc"),
-"dark2": SubResource("Animation_g5pyg"),
-"dark_buff": SubResource("Animation_hvaoa"),
-"elec1": SubResource("Animation_wngic"),
-"elec2": SubResource("Animation_da5em"),
-"elec_buff": SubResource("Animation_yogff"),
-"eyeskill": SubResource("Animation_2cbga"),
-"fire1": SubResource("Animation_hib5r"),
-"fire2": SubResource("Animation_tqdm0"),
-"fire_buff": SubResource("Animation_4loae"),
-"flat_buff": SubResource("Animation_5hpyx"),
-"flat_debuff": SubResource("Animation_s1r7g"),
-"heal1": SubResource("Animation_r5ylo"),
-"ice1": SubResource("Animation_4yttf"),
-"ice2": SubResource("Animation_wmveu"),
-"ice_buff": SubResource("Animation_s5xnd"),
-"light1": SubResource("Animation_q3ffi"),
-"light2": SubResource("Animation_htd7w"),
-"light_buff": SubResource("Animation_eydcq"),
-"poison": SubResource("Animation_bx87j"),
-"revive": SubResource("Animation_g56ls"),
-"seal": SubResource("Animation_naf86"),
-"startup_anim": SubResource("Animation_cefwy"),
-"status_recovery": SubResource("Animation_s12fy"),
-"stun1": SubResource("Animation_xfsn3"),
-"tech_buff": SubResource("Animation_wb7xe"),
-"void_shield": SubResource("Animation_brvt4"),
-"wind1": SubResource("Animation_nhves"),
-"wind2": SubResource("Animation_jx6aa"),
-"wind_buff": SubResource("Animation_sqe2w")
+&"RESET": SubResource("Animation_01a3m"),
+&"agro": SubResource("Animation_3oog8"),
+&"almighty_all": SubResource("Animation_om584"),
+&"atk_buff": SubResource("Animation_uy4wm"),
+&"bind": SubResource("Animation_t3tu8"),
+&"dark1": SubResource("Animation_ymssc"),
+&"dark2": SubResource("Animation_g5pyg"),
+&"dark_buff": SubResource("Animation_hvaoa"),
+&"elec1": SubResource("Animation_wngic"),
+&"elec2": SubResource("Animation_da5em"),
+&"elec_buff": SubResource("Animation_yogff"),
+&"eyeskill": SubResource("Animation_2cbga"),
+&"fire1": SubResource("Animation_hib5r"),
+&"fire2": SubResource("Animation_tqdm0"),
+&"fire_buff": SubResource("Animation_4loae"),
+&"flat_buff": SubResource("Animation_5hpyx"),
+&"flat_debuff": SubResource("Animation_s1r7g"),
+&"heal1": SubResource("Animation_r5ylo"),
+&"ice1": SubResource("Animation_4yttf"),
+&"ice2": SubResource("Animation_wmveu"),
+&"ice_buff": SubResource("Animation_s5xnd"),
+&"light1": SubResource("Animation_q3ffi"),
+&"light2": SubResource("Animation_htd7w"),
+&"light_buff": SubResource("Animation_eydcq"),
+&"poison": SubResource("Animation_bx87j"),
+&"revive": SubResource("Animation_g56ls"),
+&"seal": SubResource("Animation_naf86"),
+&"startup_anim": SubResource("Animation_cefwy"),
+&"status_recovery": SubResource("Animation_s12fy"),
+&"stun1": SubResource("Animation_xfsn3"),
+&"tech_buff": SubResource("Animation_wb7xe"),
+&"void_shield": SubResource("Animation_brvt4"),
+&"wind1": SubResource("Animation_nhves"),
+&"wind2": SubResource("Animation_jx6aa"),
+&"wind_buff": SubResource("Animation_sqe2w")
 }
 
 [node name="EffectSprite" type="Sprite2D"]

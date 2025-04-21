@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dt8yed2ymis4o"]
 
-[ext_resource type="Script" path="res://misc_icons/CurrencyDisplay.cs" id="1_ln7dr"]
+[ext_resource type="Script" uid="uid://dnj58y0dyi5t2" path="res://misc_icons/CurrencyDisplay.cs" id="1_ln7dr"]
 [ext_resource type="PackedScene" uid="uid://bqmfi0ome6yn4" path="res://misc_icons/Icon.tscn" id="1_r7sy8"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_gx28l"]
 

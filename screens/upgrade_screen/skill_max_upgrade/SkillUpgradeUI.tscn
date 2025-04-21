@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cifmn35tksic7"]
 
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="1_3k4h3"]
-[ext_resource type="Script" path="res://screens/upgrade_screen/skill_max_upgrade/SkillUpgradeUI.cs" id="1_j4kmg"]
+[ext_resource type="Script" uid="uid://fokxowatbvqa" path="res://screens/upgrade_screen/skill_max_upgrade/SkillUpgradeUI.cs" id="1_j4kmg"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_hc6ou"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m0lq4"]

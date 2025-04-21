@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://cq8pbliuivvh0" path="res://cg_backgrounds/overworld/004bg00307.jpg" id="2"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="3"]
-[ext_resource type="Script" path="res://screens/MainScreen.cs" id="4"]
+[ext_resource type="Script" uid="uid://bjuj28rl6on7q" path="res://screens/MainScreen.cs" id="4"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="4_sanap"]
 [ext_resource type="PackedScene" uid="uid://bf7cs0q6o8n8u" path="res://screens/MainPlayerContainer.tscn" id="4_ujo55"]
-[ext_resource type="Script" path="res://misc_icons/Icon.cs" id="6_660s2"]
+[ext_resource type="Script" uid="uid://o71c1ppvf06t" path="res://misc_icons/Icon.cs" id="6_660s2"]
 [ext_resource type="AudioStream" uid="uid://can6kay0x7j8w" path="res://effects/effect_sounds/Up1.ogg" id="7_n71p5"]
 [ext_resource type="AudioStream" uid="uid://cki5ypqtto4t2" path="res://effects/effect_sounds/Buzzer1.ogg" id="7_oeymu"]
 

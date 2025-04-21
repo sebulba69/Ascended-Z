@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://86hlflgnxjcc"]
 
-[ext_resource type="Script" path="res://dungeon_crawling/scenes/DungeonScreen.cs" id="1_7745h"]
+[ext_resource type="Script" uid="uid://lkgg2wj1crdh" path="res://dungeon_crawling/scenes/DungeonScreen.cs" id="1_7745h"]
 [ext_resource type="PackedScene" uid="uid://djlhy6ga7e5t2" path="res://dungeon_crawling/scenes/DungeonEntity.tscn" id="2_p1r2d"]
 [ext_resource type="Texture2D" uid="uid://dww5loey3m4kp" path="res://cg_backgrounds/dungeon_crawling/bg00701.jpg" id="3_qvvl2"]
 [ext_resource type="AudioStream" uid="uid://b3unft7ukkxtf" path="res://effects/effect_sounds/Battle1.ogg" id="4_fit8f"]

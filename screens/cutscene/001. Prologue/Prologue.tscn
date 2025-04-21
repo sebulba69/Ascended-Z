@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://ci2a1b7waos6m"]
 
 [ext_resource type="Texture2D" uid="uid://cm3mrnrncgbut" path="res://cg_backgrounds/bg00101.jpg" id="1_6xa68"]
-[ext_resource type="Script" path="res://screens/cutscene/001. Prologue/Prologue.cs" id="1_o8rf5"]
+[ext_resource type="Script" uid="uid://dim1ri4b6a82a" path="res://screens/cutscene/001. Prologue/Prologue.cs" id="1_o8rf5"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="3_qn6pf"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="4_iwk1s"]
 [ext_resource type="AudioStream" uid="uid://12ugi6m2dfly" path="res://screens/cutscene/001. Prologue/Labyrinth of Refrain_ Coven of Dusk - 08RoseBed (Rose Bed).ogg" id="7_dyxqd"]
@@ -138,9 +138,9 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0plws"]
 _data = {
-"1. openingShot": SubResource("Animation_x5bh5"),
-"2. fade_in_box": SubResource("Animation_yrqda"),
-"RESET": SubResource("Animation_vy7lb")
+&"1. openingShot": SubResource("Animation_x5bh5"),
+&"2. fade_in_box": SubResource("Animation_yrqda"),
+&"RESET": SubResource("Animation_vy7lb")
 }
 
 [node name="Prologue" type="Node2D"]

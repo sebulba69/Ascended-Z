@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bqrhisukorc1o"]
 
-[ext_resource type="Script" path="res://dungeon_crawling/scenes/TileScene.cs" id="1_q0og1"]
+[ext_resource type="Script" uid="uid://bfxw8bakh1dr4" path="res://dungeon_crawling/scenes/TileScene.cs" id="1_q0og1"]
 [ext_resource type="Texture2D" uid="uid://p2lm6a6lgn7g" path="res://dungeon_crawling/art_assets/general/shadow.png" id="2_fntij"]
 [ext_resource type="Texture2D" uid="uid://lcmlb3tl5am4" path="res://dungeon_crawling/art_assets/general/bg.png" id="2_gux6g"]
 [ext_resource type="Texture2D" uid="uid://fu3igr300nxf" path="res://dungeon_crawling/art_assets/general/ground.png" id="3_5jj2q"]

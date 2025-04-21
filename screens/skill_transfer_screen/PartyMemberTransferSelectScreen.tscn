@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1rmcdko6l2fp"]
 
 [ext_resource type="PackedScene" uid="uid://bj8ftwmnl2gy6" path="res://screens/skill_transfer_screen/EntitySelectionScene.tscn" id="1_574tb"]
-[ext_resource type="Script" path="res://screens/skill_transfer_screen/PartyMemberTransferSelectScreen.cs" id="1_t6lvi"]
+[ext_resource type="Script" uid="uid://cny87g83neoo4" path="res://screens/skill_transfer_screen/PartyMemberTransferSelectScreen.cs" id="1_t6lvi"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_icveo"]
-[ext_resource type="Script" path="res://screens/skill_transfer_screen/EntitySelectionScene.cs" id="3_3tb6s"]
+[ext_resource type="Script" uid="uid://d2mf3ljyo031l" path="res://screens/skill_transfer_screen/EntitySelectionScene.cs" id="3_3tb6s"]
 
 [node name="PartyMemberTransferSelectScreen" type="HBoxContainer"]
 texture_filter = 2

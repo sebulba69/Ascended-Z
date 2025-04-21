@@ -139,8 +139,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_thum6"]
 _data = {
-"RESET": SubResource("Animation_ld8vt"),
-"drakalla_idle": SubResource("Animation_fo18v")
+&"RESET": SubResource("Animation_ld8vt"),
+&"drakalla_idle": SubResource("Animation_fo18v")
 }
 
 [node name="DrakallaBattleSprite" type="Node2D"]

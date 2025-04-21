@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bxot4pfsa0qla"]
 
 [ext_resource type="PackedScene" uid="uid://b5e2ob3gqma0a" path="res://screens/PartyMemberDisplay.tscn" id="1_1pkjw"]
-[ext_resource type="Script" path="res://screens/FusionScreen.cs" id="1_ps4ux"]
+[ext_resource type="Script" uid="uid://k06pvgjnb4c5" path="res://screens/FusionScreen.cs" id="1_ps4ux"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_01pv5"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="4_qq27q"]
 

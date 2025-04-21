@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dlu85hna1k2gf"]
 
-[ext_resource type="Script" path="res://screens/RecruitScreenTabs.cs" id="1_icywx"]
+[ext_resource type="Script" uid="uid://3ruhj5migqk6" path="res://screens/RecruitScreenTabs.cs" id="1_icywx"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_k52ob"]
 [ext_resource type="PackedScene" uid="uid://6gxnbhp4n8rq" path="res://screens/RecruitScreen.tscn" id="1_tcrlb"]
 [ext_resource type="PackedScene" uid="uid://cu5quwy1w03eh" path="res://screens/RecruitCustomScreen.tscn" id="2_vx1bb"]

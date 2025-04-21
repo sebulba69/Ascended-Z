@@ -135,8 +135,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p8sw3"]
 _data = {
-"RESET": SubResource("Animation_8a1tv"),
-"draco_animatoin": SubResource("Animation_3bwne")
+&"RESET": SubResource("Animation_8a1tv"),
+&"draco_animatoin": SubResource("Animation_3bwne")
 }
 
 [node name="DracoBattleSprite" type="Node2D"]

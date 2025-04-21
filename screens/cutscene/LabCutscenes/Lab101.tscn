@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://cv1fjhmdotr6e"]
 
-[ext_resource type="Script" path="res://screens/cutscene/LabCutscenes/Lab101.cs" id="1_chkyh"]
+[ext_resource type="Script" uid="uid://pa0qseyj6ycu" path="res://screens/cutscene/LabCutscenes/Lab101.cs" id="1_chkyh"]
 [ext_resource type="Texture2D" uid="uid://baooabwbvl7q1" path="res://cg_backgrounds/dungeon_crawling/bg00701_3.png" id="1_qyloj"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="3_efjoj"]
 [ext_resource type="PackedScene" uid="uid://c8c1fin53mgj3" path="res://screens/cutscene/CutsceneEntity.tscn" id="4_kixu6"]
@@ -134,11 +134,11 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m2sxy"]
 _data = {
-"RESET": SubResource("Animation_bj6ex"),
-"harbinger_pan": SubResource("Animation_7ltem"),
-"opening_pan": SubResource("Animation_cf2oh"),
-"pan_to_normal": SubResource("Animation_edkko"),
-"pan_to_voice": SubResource("Animation_rdywl")
+&"RESET": SubResource("Animation_bj6ex"),
+&"harbinger_pan": SubResource("Animation_7ltem"),
+&"opening_pan": SubResource("Animation_cf2oh"),
+&"pan_to_normal": SubResource("Animation_edkko"),
+&"pan_to_voice": SubResource("Animation_rdywl")
 }
 
 [sub_resource type="Animation" id="Animation_h2f02"]
@@ -231,11 +231,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0plws"]
 _data = {
-"fade_in_box": SubResource("Animation_h2f02"),
-"fade_out_box": SubResource("Animation_42dsv"),
-"fade_out_guy": SubResource("Animation_mvjtr"),
-"full_view": SubResource("Animation_kqe45"),
-"openingShot": SubResource("Animation_gi4jh")
+&"fade_in_box": SubResource("Animation_h2f02"),
+&"fade_out_box": SubResource("Animation_42dsv"),
+&"fade_out_guy": SubResource("Animation_mvjtr"),
+&"full_view": SubResource("Animation_kqe45"),
+&"openingShot": SubResource("Animation_gi4jh")
 }
 
 [node name="LabrybuceCutscene" type="Node2D"]

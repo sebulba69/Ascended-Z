@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://epkcinxhpd2j"]
 
-[ext_resource type="Script" path="res://screens/cutscene/006. Ending A/NormalEnding.cs" id="1_3kc2d"]
+[ext_resource type="Script" uid="uid://c0q4ha4nuyh4" path="res://screens/cutscene/006. Ending A/NormalEnding.cs" id="1_3kc2d"]
 [ext_resource type="Texture2D" uid="uid://b56q58gg616lq" path="res://cg_backgrounds/special_boss_bgs/bg01105.jpg" id="2_4mq6g"]
 [ext_resource type="PackedScene" uid="uid://c8c1fin53mgj3" path="res://screens/cutscene/CutsceneEntity.tscn" id="4_pgpt1"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="4_uc3iw"]
@@ -56,25 +56,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fj30p"]
 _data = {
-"RESET": SubResource("Animation_6sc3j"),
-"fade_in_box": SubResource("Animation_f84gh"),
-"fade_out_box": SubResource("Animation_nno4p")
-}
-
-[sub_resource type="Animation" id="Animation_vu51v"]
-resource_name = "fade_in_fittotu"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CutsceneEntity:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+&"RESET": SubResource("Animation_6sc3j"),
+&"fade_in_box": SubResource("Animation_f84gh"),
+&"fade_out_box": SubResource("Animation_nno4p")
 }
 
 [sub_resource type="Animation" id="Animation_mq7u0"]
@@ -116,6 +100,22 @@ tracks/2/keys = {
 "values": [Vector2(0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_vu51v"]
+resource_name = "fade_in_fittotu"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CutsceneEntity:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_08c2h"]
 resource_name = "zoom_in_fittotu"
 length = 0.3
@@ -146,9 +146,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fmvbr"]
 _data = {
-"RESET": SubResource("Animation_mq7u0"),
-"fade_in_fittotu": SubResource("Animation_vu51v"),
-"zoom_in_fittotu": SubResource("Animation_08c2h")
+&"RESET": SubResource("Animation_mq7u0"),
+&"fade_in_fittotu": SubResource("Animation_vu51v"),
+&"zoom_in_fittotu": SubResource("Animation_08c2h")
 }
 
 [node name="FusionIntroCutscene" type="Node2D"]

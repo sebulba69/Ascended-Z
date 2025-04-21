@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://j0wfx0ulchfb"]
 
-[ext_resource type="Script" path="res://screens/cutscene/004B. Fusion Intro Cutscene/FusinonIntroCutscene.cs" id="1_wisla"]
+[ext_resource type="Script" uid="uid://2odq146b6jxd" path="res://screens/cutscene/004B. Fusion Intro Cutscene/FusinonIntroCutscene.cs" id="1_wisla"]
 [ext_resource type="Texture2D" uid="uid://c3nebggq4pcdd" path="res://cg_backgrounds/dungeon/002bg02501.jpg" id="2_3q2kk"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="3_y4ncy"]
 [ext_resource type="PackedScene" uid="uid://c8c1fin53mgj3" path="res://screens/cutscene/CutsceneEntity.tscn" id="4_ne6wc"]
@@ -91,9 +91,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2pue1"]
 _data = {
-"RESET": SubResource("Animation_n02rx"),
-"tier14fitottu": SubResource("Animation_5pdld"),
-"tier9fitottu": SubResource("Animation_8ckfj")
+&"RESET": SubResource("Animation_n02rx"),
+&"tier14fitottu": SubResource("Animation_5pdld"),
+&"tier9fitottu": SubResource("Animation_8ckfj")
 }
 
 [sub_resource type="Animation" id="Animation_jctsl"]
@@ -225,12 +225,12 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0plws"]
 _data = {
-"RESET": SubResource("Animation_jctsl"),
-"fade_in_box": SubResource("Animation_774km"),
-"fade_out_box": SubResource("Animation_42dsv"),
-"fade_out_guy": SubResource("Animation_mvjtr"),
-"full_view": SubResource("Animation_tdkbs"),
-"openingShot": SubResource("Animation_gi4jh")
+&"RESET": SubResource("Animation_jctsl"),
+&"fade_in_box": SubResource("Animation_774km"),
+&"fade_out_box": SubResource("Animation_42dsv"),
+&"fade_out_guy": SubResource("Animation_mvjtr"),
+&"full_view": SubResource("Animation_tdkbs"),
+&"openingShot": SubResource("Animation_gi4jh")
 }
 
 [node name="FusionIntroCutscene" type="Node2D"]

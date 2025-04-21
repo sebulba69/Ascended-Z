@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://srt2g6f6s1h6"]
 
-[ext_resource type="Script" path="res://screens/upgrade_screen/skill_max_upgrade/SkillUpgradeUnit.cs" id="1_bm6vv"]
+[ext_resource type="Script" uid="uid://dquf17cnpvo0b" path="res://screens/upgrade_screen/skill_max_upgrade/SkillUpgradeUnit.cs" id="1_bm6vv"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_mr8qk"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="2_acxth"]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://btchpoip5fvok" path="res://turn_icons/player_icon_half.png" id="1_a1vpp"]
 [ext_resource type="Texture2D" uid="uid://d1qics4xkuj6q" path="res://turn_icons/player_icon_full.png" id="1_eq2hb"]
-[ext_resource type="Script" path="res://turn_icons/TurnIcon.cs" id="2_cj307"]
+[ext_resource type="Script" uid="uid://dxvxcolc8jsc" path="res://turn_icons/TurnIcon.cs" id="2_cj307"]
 [ext_resource type="Texture2D" uid="uid://udrgagksu8iw" path="res://turn_icons/enemy_icon_full.png" id="2_th34e"]
 [ext_resource type="Texture2D" uid="uid://dw5vu0l2qlcbo" path="res://turn_icons/enemy_icon_half.png" id="5_d3nsk"]
 
@@ -152,11 +152,11 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_061q4"]
 _data = {
-"RESET": SubResource("Animation_0hhhc"),
-"enemy_turn_full": SubResource("Animation_gno51"),
-"enemy_turn_half": SubResource("Animation_iuigm"),
-"player_turn_full": SubResource("Animation_sxvfn"),
-"player_turn_half": SubResource("Animation_id0n2")
+&"RESET": SubResource("Animation_0hhhc"),
+&"enemy_turn_full": SubResource("Animation_gno51"),
+&"enemy_turn_half": SubResource("Animation_iuigm"),
+&"player_turn_full": SubResource("Animation_sxvfn"),
+&"player_turn_half": SubResource("Animation_id0n2")
 }
 
 [node name="TurnIcon" type="TextureRect"]

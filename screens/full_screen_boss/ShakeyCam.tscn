@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dwjmhp4570nke"]
 
-[ext_resource type="Script" path="res://screens/full_screen_boss/ShakeyCam.cs" id="1_euvev"]
+[ext_resource type="Script" uid="uid://cjg2ugwoflknh" path="res://screens/full_screen_boss/ShakeyCam.cs" id="1_euvev"]
 [ext_resource type="AudioStream" uid="uid://dyxxgykvs4hrj" path="res://effects/effect_sounds/Damage4.ogg" id="2_yerjl"]
 
 [node name="Camera" type="Camera2D"]

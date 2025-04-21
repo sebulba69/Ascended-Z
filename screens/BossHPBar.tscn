@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c23fpate1ndy5"]
 
-[ext_resource type="Script" path="res://screens/BossHPBar.cs" id="1_7j0de"]
+[ext_resource type="Script" uid="uid://b5lso0npa7v0g" path="res://screens/BossHPBar.cs" id="1_7j0de"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_8dmex"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvreb"]

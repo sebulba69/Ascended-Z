@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bad6j156d7tuk"]
 
-[ext_resource type="Script" path="res://screens/EntityDisplayBox.cs" id="1_314aw"]
+[ext_resource type="Script" uid="uid://bakq6jdgqogjs" path="res://screens/EntityDisplayBox.cs" id="1_314aw"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_pkpmd"]
 [ext_resource type="PackedScene" uid="uid://t6lhru8f8fr7" path="res://effects/EffectSprite.tscn" id="3_3epbv"]
 [ext_resource type="Texture2D" uid="uid://rc2e70qmjetc" path="res://progressbar_assets/BarV5_Bar.png" id="3_7q0ym"]

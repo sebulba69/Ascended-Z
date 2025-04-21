@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://hjhsy0byd0qt"]
 
-[ext_resource type="Script" path="res://screens/cutscene/006. Ending A/EndingA2.cs" id="1_o21px"]
+[ext_resource type="Script" uid="uid://dt8iradojck8a" path="res://screens/cutscene/006. Ending A/EndingA2.cs" id="1_o21px"]
 [ext_resource type="Texture2D" uid="uid://cm3mrnrncgbut" path="res://cg_backgrounds/bg00101.jpg" id="2_fxxi2"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="3_lopil"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="4_ulbt8"]
@@ -197,12 +197,12 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0plws"]
 _data = {
-"1. openingShot": SubResource("Animation_x5bh5"),
-"2. fade_in_box": SubResource("Animation_yrqda"),
-"RESET": SubResource("Animation_vy7lb"),
-"fade_in_ascended_label": SubResource("Animation_4kmsx"),
-"fade_out_box": SubResource("Animation_kb5gb"),
-"fade_to_black": SubResource("Animation_a8qpw")
+&"1. openingShot": SubResource("Animation_x5bh5"),
+&"2. fade_in_box": SubResource("Animation_yrqda"),
+&"RESET": SubResource("Animation_vy7lb"),
+&"fade_in_ascended_label": SubResource("Animation_4kmsx"),
+&"fade_out_box": SubResource("Animation_kb5gb"),
+&"fade_to_black": SubResource("Animation_a8qpw")
 }
 
 [sub_resource type="Animation" id="Animation_dyrsv"]
@@ -262,8 +262,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h4m8o"]
 _data = {
-"RESET": SubResource("Animation_dyrsv"),
-"fade_out_song": SubResource("Animation_3iyky")
+&"RESET": SubResource("Animation_dyrsv"),
+&"fade_out_song": SubResource("Animation_3iyky")
 }
 
 [node name="Prologue" type="Node2D"]

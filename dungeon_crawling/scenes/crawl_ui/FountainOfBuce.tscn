@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://0022fihmuqsk"]
 
 [ext_resource type="Texture2D" uid="uid://cshe2l3yx8l1c" path="res://dungeon_crawling/art_assets/entity_icons/bucetain.png" id="1_b6tfn"]
-[ext_resource type="Script" path="res://dungeon_crawling/scenes/crawl_ui/FountainOfBuce.cs" id="1_kscpm"]
+[ext_resource type="Script" uid="uid://boa23p2qbma7s" path="res://dungeon_crawling/scenes/crawl_ui/FountainOfBuce.cs" id="1_kscpm"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_kfois"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="3_bukn8"]
 

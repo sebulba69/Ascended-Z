@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://cyix8qfv4ey0"]
 
-[ext_resource type="Script" path="res://screens/cutscene/Elders/Elder4.cs" id="1_c5q3y"]
+[ext_resource type="Script" uid="uid://bygbk3l7p827m" path="res://screens/cutscene/Elders/Elder4.cs" id="1_c5q3y"]
 [ext_resource type="Texture2D" uid="uid://dcqgrd0q7106s" path="res://entity_pics_special_bosses/aiucxaiobh'lo/aiucxaiobh'lo_full.png" id="2_nexi3"]
 [ext_resource type="Texture2D" uid="uid://ddv8sua58d2qw" path="res://cg_backgrounds/dungeon/029.png" id="2_v0288"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="4_u0h8v"]
@@ -55,9 +55,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fj30p"]
 _data = {
-"RESET": SubResource("Animation_6sc3j"),
-"fade_in_box": SubResource("Animation_f84gh"),
-"fade_out_box": SubResource("Animation_nno4p")
+&"RESET": SubResource("Animation_6sc3j"),
+&"fade_in_box": SubResource("Animation_f84gh"),
+&"fade_out_box": SubResource("Animation_nno4p")
 }
 
 [sub_resource type="Animation" id="Animation_omxub"]
@@ -197,10 +197,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jswqs"]
 _data = {
-"RESET": SubResource("Animation_omxub"),
-"boss_intro_scene": SubResource("Animation_iyg62"),
-"opening_pan": SubResource("Animation_v68b4"),
-"zoom_in_on_boss": SubResource("Animation_ksnw1")
+&"RESET": SubResource("Animation_omxub"),
+&"boss_intro_scene": SubResource("Animation_iyg62"),
+&"opening_pan": SubResource("Animation_v68b4"),
+&"zoom_in_on_boss": SubResource("Animation_ksnw1")
 }
 
 [node name="Elder4Cutscene" type="Node2D"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ohs3t7s1ur3q"]
 
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_6c3qe"]
-[ext_resource type="Script" path="res://screens/MenuScene.cs" id="1_rhasl"]
+[ext_resource type="Script" uid="uid://bv11cwh5exbr6" path="res://screens/MenuScene.cs" id="1_rhasl"]
 
 [node name="MenuScene" type="CenterContainer"]
 texture_filter = 2

@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://bf1rkot1qyx28"]
 
-[ext_resource type="Script" path="res://screens/cutscene/007. Ending B/EndingB1.cs" id="1_4reke"]
+[ext_resource type="Script" uid="uid://cyjukqf4g8y8q" path="res://screens/cutscene/007. Ending B/EndingB1.cs" id="1_4reke"]
 [ext_resource type="Texture2D" uid="uid://cm3mrnrncgbut" path="res://cg_backgrounds/bg00101.jpg" id="2_anh3f"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="3_fqer0"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="4_237sp"]
@@ -258,15 +258,15 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0plws"]
 _data = {
-"1. openingShot": SubResource("Animation_x5bh5"),
-"2. fade_in_box": SubResource("Animation_yrqda"),
-"RESET": SubResource("Animation_vy7lb"),
-"fade_in_ascended_label": SubResource("Animation_4kmsx"),
-"fade_in_bg": SubResource("Animation_glikj"),
-"fade_in_end_screen": SubResource("Animation_8ijm4"),
-"fade_out_box": SubResource("Animation_kb5gb"),
-"fade_out_end_screen": SubResource("Animation_h2p0t"),
-"fade_to_black": SubResource("Animation_a8qpw")
+&"1. openingShot": SubResource("Animation_x5bh5"),
+&"2. fade_in_box": SubResource("Animation_yrqda"),
+&"RESET": SubResource("Animation_vy7lb"),
+&"fade_in_ascended_label": SubResource("Animation_4kmsx"),
+&"fade_in_bg": SubResource("Animation_glikj"),
+&"fade_in_end_screen": SubResource("Animation_8ijm4"),
+&"fade_out_box": SubResource("Animation_kb5gb"),
+&"fade_out_end_screen": SubResource("Animation_h2p0t"),
+&"fade_to_black": SubResource("Animation_a8qpw")
 }
 
 [sub_resource type="Animation" id="Animation_dyrsv"]
@@ -338,8 +338,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h4m8o"]
 _data = {
-"RESET": SubResource("Animation_dyrsv"),
-"fade_out_song": SubResource("Animation_3iyky")
+&"RESET": SubResource("Animation_dyrsv"),
+&"fade_out_song": SubResource("Animation_3iyky")
 }
 
 [node name="Prologue" type="Node2D"]

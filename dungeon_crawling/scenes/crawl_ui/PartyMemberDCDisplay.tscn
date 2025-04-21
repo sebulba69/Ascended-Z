@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ceawrutslu0x6"]
 
 [ext_resource type="Texture2D" uid="uid://gcywdwm18r1" path="res://entity_pics/arwig.png" id="1_pb7bc"]
-[ext_resource type="Script" path="res://dungeon_crawling/scenes/crawl_ui/PartyMemberDCDisplay.cs" id="1_vd0bu"]
+[ext_resource type="Script" uid="uid://dxiurghygs6jh" path="res://dungeon_crawling/scenes/crawl_ui/PartyMemberDCDisplay.cs" id="1_vd0bu"]
 [ext_resource type="Texture2D" uid="uid://bs4gg4uakqucs" path="res://progressbar_assets/BarV1_Bar.png" id="2_vc6uk"]
 [ext_resource type="Texture2D" uid="uid://cgmiottbplblf" path="res://progressbar_assets/BarV1_ProgressBarBorder.png" id="3_yl3cs"]
 [ext_resource type="Texture2D" uid="uid://dlc6ggeck3ft3" path="res://progressbar_assets/BarV1_ProgressBar.png" id="4_scbfl"]

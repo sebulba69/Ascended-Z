@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://da81bo5j4qtes"]
 
-[ext_resource type="Script" path="res://screens/full_screen_boss/AiucxaiobhloBattleScene.cs" id="1_oiv3h"]
+[ext_resource type="Script" uid="uid://c58staa6e85jh" path="res://screens/full_screen_boss/AiucxaiobhloBattleScene.cs" id="1_oiv3h"]
 [ext_resource type="Texture2D" uid="uid://ddv8sua58d2qw" path="res://cg_backgrounds/dungeon/029.png" id="2_hpgi7"]
 [ext_resource type="PackedScene" uid="uid://c15grewugbv3c" path="res://screens/full_screen_boss/FullScreenBossHUD.tscn" id="3_3ac4q"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="4_dfgax"]
@@ -249,9 +249,9 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ig7o"]
 _data = {
-"RESET": SubResource("Animation_eeod0"),
-"aiucxaiob_opening_shot": SubResource("Animation_jpndp"),
-"netalla_opening_shot": SubResource("Animation_af486")
+&"RESET": SubResource("Animation_eeod0"),
+&"aiucxaiob_opening_shot": SubResource("Animation_jpndp"),
+&"netalla_opening_shot": SubResource("Animation_af486")
 }
 
 [sub_resource type="Animation" id="Animation_22a18"]
@@ -288,8 +288,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ejjxc"]
 _data = {
-"RESET": SubResource("Animation_22a18"),
-"bg_fun": SubResource("Animation_rwtkx")
+&"RESET": SubResource("Animation_22a18"),
+&"bg_fun": SubResource("Animation_rwtkx")
 }
 
 [node name="AiucxaiobhloBattleScene" type="Node2D"]

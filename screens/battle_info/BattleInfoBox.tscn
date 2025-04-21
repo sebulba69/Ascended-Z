@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dob14rb5ely7"]
 
 [ext_resource type="Texture2D" uid="uid://b000qj8oq2gxx" path="res://player_pics/2.png" id="1_0qi7h"]
-[ext_resource type="Script" path="res://screens/battle_info/BattleInfoBox.cs" id="1_xfod0"]
+[ext_resource type="Script" uid="uid://6xqnpadafjbf" path="res://screens/battle_info/BattleInfoBox.cs" id="1_xfod0"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_43pi6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mo6x5"]

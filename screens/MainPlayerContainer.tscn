@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bf7cs0q6o8n8u"]
 
-[ext_resource type="Script" path="res://screens/MainPlayerContainer.cs" id="1_hwanr"]
+[ext_resource type="Script" uid="uid://drbu3c5adpj3p" path="res://screens/MainPlayerContainer.cs" id="1_hwanr"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_sjmhr"]
 
 [node name="CenterContainer" type="VBoxContainer"]

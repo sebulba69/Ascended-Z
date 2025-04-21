@@ -109,8 +109,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8fwka"]
 _data = {
-"RESET": SubResource("Animation_8tg5t"),
-"ghryztitralbh_loop": SubResource("Animation_gv5cl")
+&"RESET": SubResource("Animation_8tg5t"),
+&"ghryztitralbh_loop": SubResource("Animation_gv5cl")
 }
 
 [node name="GhryztitralbhBattleSprite" type="Node2D"]

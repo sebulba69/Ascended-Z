@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://drldbvl0te4h5"]
 
-[ext_resource type="Script" path="res://screens/cutscene/003. Labrybuce Introduction/LabrybuceIntro.cs" id="1_lbqll"]
+[ext_resource type="Script" uid="uid://bw0v5pvd2wk86" path="res://screens/cutscene/003. Labrybuce Introduction/LabrybuceIntro.cs" id="1_lbqll"]
 [ext_resource type="Texture2D" uid="uid://c5xd4it2pk7uq" path="res://cg_backgrounds/dungeon/001bg03101.jpg" id="2_jvaab"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="3_aq3p3"]
 [ext_resource type="PackedScene" uid="uid://c8c1fin53mgj3" path="res://screens/cutscene/CutsceneEntity.tscn" id="4_tpvyh"]
@@ -64,8 +64,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2pue1"]
 _data = {
-"RESET": SubResource("Animation_n02rx"),
-"tier9fitottu": SubResource("Animation_8ckfj")
+&"RESET": SubResource("Animation_n02rx"),
+&"tier9fitottu": SubResource("Animation_8ckfj")
 }
 
 [sub_resource type="Animation" id="Animation_jctsl"]
@@ -197,12 +197,12 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0plws"]
 _data = {
-"RESET": SubResource("Animation_jctsl"),
-"fade_in_box": SubResource("Animation_774km"),
-"fade_out_box": SubResource("Animation_42dsv"),
-"fade_out_guy": SubResource("Animation_mvjtr"),
-"full_view": SubResource("Animation_tdkbs"),
-"openingShot": SubResource("Animation_gi4jh")
+&"RESET": SubResource("Animation_jctsl"),
+&"fade_in_box": SubResource("Animation_774km"),
+&"fade_out_box": SubResource("Animation_42dsv"),
+&"fade_out_guy": SubResource("Animation_mvjtr"),
+&"full_view": SubResource("Animation_tdkbs"),
+&"openingShot": SubResource("Animation_gi4jh")
 }
 
 [node name="LabrybuceCutscene" type="Node2D"]

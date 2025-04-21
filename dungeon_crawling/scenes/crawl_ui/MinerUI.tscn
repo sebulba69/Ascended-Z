@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://d2rv41ixvitce"]
 
-[ext_resource type="Script" path="res://dungeon_crawling/scenes/crawl_ui/MinerUI.cs" id="1_08a8t"]
+[ext_resource type="Script" uid="uid://5f5juuirwr1j" path="res://dungeon_crawling/scenes/crawl_ui/MinerUI.cs" id="1_08a8t"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="1_skc45"]
 [ext_resource type="Texture2D" uid="uid://0n6ormpa8b1m" path="res://dungeon_crawling/art_assets/entity_icons/miner.png" id="2_pf4s1"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_vd0n8"]

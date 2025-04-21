@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://y0ihjyx2hgy2"]
 
-[ext_resource type="Script" path="res://screens/skill_transfer_screen/SkillTransferSelectScreen.cs" id="1_bko27"]
+[ext_resource type="Script" uid="uid://dp77ajjhojwao" path="res://screens/skill_transfer_screen/SkillTransferSelectScreen.cs" id="1_bko27"]
 [ext_resource type="PackedScene" uid="uid://bj8ftwmnl2gy6" path="res://screens/skill_transfer_screen/EntitySelectionScene.tscn" id="2_4qiwi"]
-[ext_resource type="Script" path="res://screens/skill_transfer_screen/SkillSelectionScene.cs" id="3_y2c2y"]
+[ext_resource type="Script" uid="uid://c58c4wwpjmu02" path="res://screens/skill_transfer_screen/SkillSelectionScene.cs" id="3_y2c2y"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="4_oaiof"]
 
 [node name="SkillTransferSelectScreen" type="HBoxContainer"]

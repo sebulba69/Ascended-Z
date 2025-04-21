@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bhukuw57qc6sr"]
 
-[ext_resource type="Script" path="res://screens/RewardScreen.cs" id="1_2fxnw"]
+[ext_resource type="Script" uid="uid://bh5pyj4vdmmqp" path="res://screens/RewardScreen.cs" id="1_2fxnw"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_nl3do"]
 
 [node name="RewardScreen" type="Control"]

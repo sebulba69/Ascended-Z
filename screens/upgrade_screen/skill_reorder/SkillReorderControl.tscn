@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://xn3x7kfpxre0"]
 
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_1bfik"]
-[ext_resource type="Script" path="res://screens/upgrade_screen/skill_reorder/SkillReorderControl.cs" id="1_virvh"]
+[ext_resource type="Script" uid="uid://bgpx6h7dav3ye" path="res://screens/upgrade_screen/skill_reorder/SkillReorderControl.cs" id="1_virvh"]
 
 [node name="SkillReorderControl" type="CenterContainer"]
 anchors_preset = 15

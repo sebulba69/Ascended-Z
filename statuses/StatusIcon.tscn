@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1h6l4ehuhtfw"]
 
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="1_raqmj"]
-[ext_resource type="Script" path="res://statuses/StatusIcon.cs" id="1_rxuhd"]
+[ext_resource type="Script" uid="uid://djakdm160c6g5" path="res://statuses/StatusIcon.cs" id="1_rxuhd"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_4nyjt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7w5vx"]

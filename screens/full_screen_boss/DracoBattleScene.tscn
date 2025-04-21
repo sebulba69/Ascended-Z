@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://c0xdfow6naugr"]
 
-[ext_resource type="Script" path="res://screens/full_screen_boss/DracoBattleScene.cs" id="1_ugms4"]
+[ext_resource type="Script" uid="uid://ctfbksw6e4y2k" path="res://screens/full_screen_boss/DracoBattleScene.cs" id="1_ugms4"]
 [ext_resource type="Texture2D" uid="uid://cwh3cwourwrs2" path="res://cg_backgrounds/special_boss_bgs/bg00701_3.png" id="2_evvhw"]
 [ext_resource type="PackedScene" uid="uid://c15grewugbv3c" path="res://screens/full_screen_boss/FullScreenBossHUD.tscn" id="3_uleh4"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="4_ftyu6"]
@@ -148,8 +148,8 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3altw"]
 _data = {
-"RESET": SubResource("Animation_tc57q"),
-"draco_opening_shot": SubResource("Animation_w7hmw")
+&"RESET": SubResource("Animation_tc57q"),
+&"draco_opening_shot": SubResource("Animation_w7hmw")
 }
 
 [sub_resource type="Animation" id="Animation_22a18"]
@@ -186,8 +186,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ejjxc"]
 _data = {
-"RESET": SubResource("Animation_22a18"),
-"bg_fun": SubResource("Animation_rwtkx")
+&"RESET": SubResource("Animation_22a18"),
+&"bg_fun": SubResource("Animation_rwtkx")
 }
 
 [node name="DracoBattleScene" type="Node2D"]

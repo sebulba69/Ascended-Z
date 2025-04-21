@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1"]
 [ext_resource type="Texture2D" uid="uid://cm3mrnrncgbut" path="res://cg_backgrounds/bg00101.jpg" id="1_1dypp"]
-[ext_resource type="Script" path="res://screens/EmbarkScreen.cs" id="2"]
+[ext_resource type="Script" uid="uid://bgfjswm52ot51" path="res://screens/EmbarkScreen.cs" id="2"]
 [ext_resource type="PackedScene" uid="uid://dw0b6jl4ujkib" path="res://screens/PartyEditScreen.tscn" id="3_n6ybj"]
 [ext_resource type="AudioStream" uid="uid://q25xxaiw4e1c" path="res://effects/effect_sounds/Item1.ogg" id="6_4hbko"]
 

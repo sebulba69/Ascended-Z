@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7643e2j4j6ef"]
 
-[ext_resource type="Script" path="res://dungeon_crawling/scenes/crawl_ui/InventoryUI.cs" id="1_rganh"]
+[ext_resource type="Script" uid="uid://d1e5og87m8jw4" path="res://dungeon_crawling/scenes/crawl_ui/InventoryUI.cs" id="1_rganh"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="1_yproq"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_wylqi"]
 [ext_resource type="AudioStream" uid="uid://bd6ue8iwjaduk" path="res://effects/effect_sounds/Heal3.ogg" id="4_e1gwp"]

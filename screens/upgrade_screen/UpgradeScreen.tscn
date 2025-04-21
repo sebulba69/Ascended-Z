@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://0r3q62ummh0p"]
 
-[ext_resource type="Script" path="res://screens/upgrade_screen/UpgradeScreen.cs" id="1_6bmuu"]
+[ext_resource type="Script" uid="uid://td5nk0f0updi" path="res://screens/upgrade_screen/UpgradeScreen.cs" id="1_6bmuu"]
 [ext_resource type="PackedScene" uid="uid://dyohoojxufv6m" path="res://screens/upgrade_screen/UpgradeItem.tscn" id="2_e1pad"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_krmoi"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="3_u3tap"]

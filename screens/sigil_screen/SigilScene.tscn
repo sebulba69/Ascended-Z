@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dnepfoev0injr"]
 
-[ext_resource type="Script" path="res://screens/sigil_screen/SigilScene.cs" id="1_xdnj1"]
+[ext_resource type="Script" uid="uid://q5w2tg03efgk" path="res://screens/sigil_screen/SigilScene.cs" id="1_xdnj1"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_mog11"]
 [ext_resource type="Texture2D" uid="uid://4xuhfma1b1c7" path="res://misc_icons/sigil_images/08. almighty_icon.png" id="3_ak27a"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="4_3os8q"]

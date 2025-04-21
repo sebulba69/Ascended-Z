@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c2e8kn5b2n4ey"]
 
 [ext_resource type="PackedScene" uid="uid://b1rmcdko6l2fp" path="res://screens/skill_transfer_screen/PartyMemberTransferSelectScreen.tscn" id="1_1ahyt"]
-[ext_resource type="Script" path="res://screens/skill_transfer_screen/SkillTransferScreen.cs" id="1_cf57f"]
+[ext_resource type="Script" uid="uid://bwejmjed8bi6t" path="res://screens/skill_transfer_screen/SkillTransferScreen.cs" id="1_cf57f"]
 [ext_resource type="PackedScene" uid="uid://y0ihjyx2hgy2" path="res://screens/skill_transfer_screen/SkillTransferSelectScreen.tscn" id="1_fcdfk"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="3_j1kqr"]
 [ext_resource type="AudioStream" uid="uid://cki5ypqtto4t2" path="res://effects/effect_sounds/Buzzer1.ogg" id="5_6trgo"]

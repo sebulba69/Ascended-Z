@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://dqcbugun0pber"]
 
-[ext_resource type="Script" path="res://screens/cutscene/002. Prologue pt.2/Prologue02.cs" id="1_yr7jh"]
+[ext_resource type="Script" uid="uid://b2iq7brh57qlb" path="res://screens/cutscene/002. Prologue pt.2/Prologue02.cs" id="1_yr7jh"]
 [ext_resource type="Texture2D" uid="uid://dnm80n7272qoh" path="res://cg_backgrounds/overworld/001bg00501.jpg" id="2_2s8st"]
 [ext_resource type="PackedScene" uid="uid://c8c1fin53mgj3" path="res://screens/cutscene/CutsceneEntity.tscn" id="2_fkxxa"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="3_dbf3o"]
@@ -301,18 +301,18 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0plws"]
 _data = {
-"RESET": SubResource("Animation_qdku8"),
-"fade_in_backstory": SubResource("Animation_4jbmx"),
-"fade_in_box": ExtResource("7_3otml"),
-"fade_out_box": ExtResource("8_bcsag"),
-"fade_out_flashback": SubResource("Animation_d733a"),
-"fade_out_guy": SubResource("Animation_mvjtr"),
-"fade_out_the_boys": SubResource("Animation_fwqkp"),
-"full_view": SubResource("Animation_tdkbs"),
-"openingShot": SubResource("Animation_gi4jh"),
-"panAwayFromFittotu": SubResource("Animation_qkc14"),
-"panToFittotu": SubResource("Animation_bd3rc"),
-"panToFittotu2": SubResource("Animation_imp7j")
+&"RESET": SubResource("Animation_qdku8"),
+&"fade_in_backstory": SubResource("Animation_4jbmx"),
+&"fade_in_box": ExtResource("7_3otml"),
+&"fade_out_box": ExtResource("8_bcsag"),
+&"fade_out_flashback": SubResource("Animation_d733a"),
+&"fade_out_guy": SubResource("Animation_mvjtr"),
+&"fade_out_the_boys": SubResource("Animation_fwqkp"),
+&"full_view": SubResource("Animation_tdkbs"),
+&"openingShot": SubResource("Animation_gi4jh"),
+&"panAwayFromFittotu": SubResource("Animation_qkc14"),
+&"panToFittotu": SubResource("Animation_bd3rc"),
+&"panToFittotu2": SubResource("Animation_imp7j")
 }
 
 [node name="Prologue2" type="Node2D"]

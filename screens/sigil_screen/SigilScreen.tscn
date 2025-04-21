@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://uc0xi0kgtdsl"]
 
-[ext_resource type="Script" path="res://screens/sigil_screen/SigilScreen.cs" id="1_1dhhg"]
+[ext_resource type="Script" uid="uid://bwaki8fcwl7xd" path="res://screens/sigil_screen/SigilScreen.cs" id="1_1dhhg"]
 [ext_resource type="PackedScene" uid="uid://b5e2ob3gqma0a" path="res://screens/PartyMemberDisplay.tscn" id="1_yd3ew"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_8dd3j"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="2_gwj88"]

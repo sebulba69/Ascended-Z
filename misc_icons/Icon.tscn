@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bqmfi0ome6yn4"]
 
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="1_j6xfy"]
-[ext_resource type="Script" path="res://misc_icons/Icon.cs" id="2_36r1l"]
+[ext_resource type="Script" uid="uid://o71c1ppvf06t" path="res://misc_icons/Icon.cs" id="2_36r1l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8kx40"]
 

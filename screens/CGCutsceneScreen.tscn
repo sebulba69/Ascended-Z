@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://u5qjtwoh7wj2"]
 
 [ext_resource type="Texture2D" uid="uid://cm3mrnrncgbut" path="res://cg_backgrounds/bg00101.jpg" id="1"]
-[ext_resource type="Script" path="res://screens/CGCutsceneScreen.cs" id="1_l8utv"]
+[ext_resource type="Script" uid="uid://dfnx5fh3qd1nt" path="res://screens/CGCutsceneScreen.cs" id="1_l8utv"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_3h0i8"]
 [ext_resource type="AudioStream" uid="uid://cbm51xthdg6j7" path="res://music/cutscene.ogg" id="3_n8212"]
 
@@ -38,8 +38,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_36off"]
 _data = {
-"RESET": SubResource("Animation_jdgy7"),
-"credit_scroll": SubResource("Animation_g5e3t")
+&"RESET": SubResource("Animation_jdgy7"),
+&"credit_scroll": SubResource("Animation_g5e3t")
 }
 
 [node name="Credits" type="Node2D"]

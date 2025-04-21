@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5e2ob3gqma0a"]
 
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1"]
-[ext_resource type="Script" path="res://screens/PartyMemberDisplay.cs" id="3"]
+[ext_resource type="Script" uid="uid://cn01psihvr52t" path="res://screens/PartyMemberDisplay.cs" id="3"]
 
 [node name="PartyMemberIcon" type="HBoxContainer"]
 texture_filter = 2

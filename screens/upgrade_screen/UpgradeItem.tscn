@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_hbeb0"]
 [ext_resource type="Texture2D" uid="uid://me31mgsn5gw3" path="res://entity_pics/da-vid.png" id="1_l3ebw"]
-[ext_resource type="Script" path="res://screens/upgrade_screen/UpgradeItem.cs" id="1_r0nl4"]
+[ext_resource type="Script" uid="uid://lh54rqw53yj0" path="res://screens/upgrade_screen/UpgradeItem.cs" id="1_r0nl4"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="2_as6kt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4h1q0"]

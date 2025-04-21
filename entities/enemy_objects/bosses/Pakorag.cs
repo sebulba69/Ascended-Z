@@ -50,7 +50,7 @@ namespace AscendedZ.entities.enemy_objects.bosses
 
             Description = $"{Name}: Can increase its buff stacks from 2 to 4. Alternates between two scripts:\n" +
                 $"1. Uses single-hit Ice and Wind moves combined with buffs.\n\n" +
-                $"2. Uses single-hit Piercing Ice and Wind moves combined with debuffs.";
+                $"2. Uses all-hit Piercing Ice and Wind moves combined with debuffs.";
         }
 
         public override List<ISkill> GetDisplaySkillList()

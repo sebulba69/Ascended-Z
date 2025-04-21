@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c15grewugbv3c"]
 
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_l4v64"]
-[ext_resource type="Script" path="res://screens/full_screen_boss/FullScreenBossHUD.cs" id="1_qip2r"]
+[ext_resource type="Script" uid="uid://dj6jgmlyt6wtd" path="res://screens/full_screen_boss/FullScreenBossHUD.cs" id="1_qip2r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssdob"]
 bg_color = Color(0, 0, 0, 0.156863)

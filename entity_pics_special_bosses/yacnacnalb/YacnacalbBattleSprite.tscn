@@ -110,8 +110,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0r0wm"]
 _data = {
-"RESET": SubResource("Animation_gbi84"),
-"yacnacalb_idle": SubResource("Animation_wfxxo")
+&"RESET": SubResource("Animation_gbi84"),
+&"yacnacalb_idle": SubResource("Animation_wfxxo")
 }
 
 [node name="YacnacalbBattleSprite" type="Node2D"]

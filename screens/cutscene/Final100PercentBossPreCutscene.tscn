@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://etx2a0u0e8fn"]
 
-[ext_resource type="Script" path="res://screens/cutscene/Final100PercentBossPreCutscene.cs" id="1_myi1s"]
+[ext_resource type="Script" uid="uid://d0p8uabtthrfm" path="res://screens/cutscene/Final100PercentBossPreCutscene.cs" id="1_myi1s"]
 [ext_resource type="Texture2D" uid="uid://cadigt7h03olv" path="res://cg_backgrounds/overworld/026.png" id="2_bqq2q"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="3_ruan3"]
 [ext_resource type="PackedScene" uid="uid://c8c1fin53mgj3" path="res://screens/cutscene/CutsceneEntity.tscn" id="4_1cyrg"]
@@ -348,22 +348,22 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0plws"]
 _data = {
-"RESET": SubResource("Animation_qdku8"),
-"boss_appears": SubResource("Animation_nx5be"),
-"fade_in_backstory": SubResource("Animation_4jbmx"),
-"fade_in_box": ExtResource("11_8vaft"),
-"fade_in_fittotu": SubResource("Animation_k4csd"),
-"fade_out_boss": SubResource("Animation_t41v2"),
-"fade_out_box": ExtResource("12_x1eca"),
-"fade_out_flashback": SubResource("Animation_d733a"),
-"fade_out_guy": SubResource("Animation_mvjtr"),
-"fade_out_the_boys": SubResource("Animation_fwqkp"),
-"full_view": SubResource("Animation_tdkbs"),
-"openingShot": SubResource("Animation_gi4jh"),
-"panAwayFromFittotu": SubResource("Animation_qkc14"),
-"panToFittotu": SubResource("Animation_bd3rc"),
-"panToFittotu2": SubResource("Animation_imp7j"),
-"slow_cam_zoom": SubResource("Animation_8wlmu")
+&"RESET": SubResource("Animation_qdku8"),
+&"boss_appears": SubResource("Animation_nx5be"),
+&"fade_in_backstory": SubResource("Animation_4jbmx"),
+&"fade_in_box": ExtResource("11_8vaft"),
+&"fade_in_fittotu": SubResource("Animation_k4csd"),
+&"fade_out_boss": SubResource("Animation_t41v2"),
+&"fade_out_box": ExtResource("12_x1eca"),
+&"fade_out_flashback": SubResource("Animation_d733a"),
+&"fade_out_guy": SubResource("Animation_mvjtr"),
+&"fade_out_the_boys": SubResource("Animation_fwqkp"),
+&"full_view": SubResource("Animation_tdkbs"),
+&"openingShot": SubResource("Animation_gi4jh"),
+&"panAwayFromFittotu": SubResource("Animation_qkc14"),
+&"panToFittotu": SubResource("Animation_bd3rc"),
+&"panToFittotu2": SubResource("Animation_imp7j"),
+&"slow_cam_zoom": SubResource("Animation_8wlmu")
 }
 
 [node name="100PercentCutscene" type="Node2D"]

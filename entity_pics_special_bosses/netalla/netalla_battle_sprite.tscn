@@ -35,8 +35,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nwxpj"]
 _data = {
-"RESET": SubResource("Animation_mhctx"),
-"boss_animation": SubResource("Animation_ywks0")
+&"RESET": SubResource("Animation_mhctx"),
+&"boss_animation": SubResource("Animation_ywks0")
 }
 
 [node name="NetallaBattleSprite" type="Node2D"]

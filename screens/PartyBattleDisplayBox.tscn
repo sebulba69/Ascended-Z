@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://daese1bd3tqym"]
 
-[ext_resource type="Script" path="res://screens/EntityDisplayBox.cs" id="1_tnsmk"]
+[ext_resource type="Script" uid="uid://bakq6jdgqogjs" path="res://screens/EntityDisplayBox.cs" id="1_tnsmk"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_6t5j7"]
 [ext_resource type="Texture2D" uid="uid://wa3vhq2cq4uw" path="res://screens/arrows/current_arrow.png" id="2_tnpt7"]
 [ext_resource type="PackedScene" uid="uid://t6lhru8f8fr7" path="res://effects/EffectSprite.tscn" id="3_anb8q"]
@@ -47,8 +47,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2w4bl"]
 _data = {
-"RESET": SubResource("Animation_andt2"),
-"up_down_arrow": SubResource("Animation_slmhg")
+&"RESET": SubResource("Animation_andt2"),
+&"up_down_arrow": SubResource("Animation_slmhg")
 }
 
 [node name="CharacterCtrlNode2" type="PanelContainer"]

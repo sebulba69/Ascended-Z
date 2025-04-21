@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cw6girysjrurc"]
 
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2"]
-[ext_resource type="Script" path="res://screens/StartScreen.cs" id="3"]
-[ext_resource type="Script" path="res://screens/AscendedDialogBox.cs" id="4"]
+[ext_resource type="Script" uid="uid://bcsy4o7wr3i8q" path="res://screens/StartScreen.cs" id="3"]
+[ext_resource type="Script" uid="uid://bfk3kdpfyxhcr" path="res://screens/AscendedDialogBox.cs" id="4"]
 [ext_resource type="Texture2D" uid="uid://cq8pbliuivvh0" path="res://cg_backgrounds/overworld/004bg00307.jpg" id="5"]
 [ext_resource type="AudioStream" uid="uid://cgb6kermfdhu" path="res://music/theme.ogg" id="5_gxppa"]
 [ext_resource type="AudioStream" uid="uid://cki5ypqtto4t2" path="res://effects/effect_sounds/Buzzer1.ogg" id="6_r3cmc"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://c4ake8msword3"]
 
-[ext_resource type="Script" path="res://screens/full_screen_boss/NetallaBattleScene.cs" id="1_un4gw"]
+[ext_resource type="Script" uid="uid://dvoapv3kqskri" path="res://screens/full_screen_boss/NetallaBattleScene.cs" id="1_un4gw"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="2_7l0dl"]
 [ext_resource type="Texture2D" uid="uid://b56q58gg616lq" path="res://cg_backgrounds/special_boss_bgs/bg01105.jpg" id="2_tb562"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="3_8rpin"]
@@ -148,8 +148,8 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ig7o"]
 _data = {
-"RESET": SubResource("Animation_eeod0"),
-"netalla_opening_shot": SubResource("Animation_af486")
+&"RESET": SubResource("Animation_eeod0"),
+&"netalla_opening_shot": SubResource("Animation_af486")
 }
 
 [sub_resource type="Animation" id="Animation_22a18"]
@@ -186,8 +186,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ejjxc"]
 _data = {
-"RESET": SubResource("Animation_22a18"),
-"bg_fun": SubResource("Animation_rwtkx")
+&"RESET": SubResource("Animation_22a18"),
+&"bg_fun": SubResource("Animation_rwtkx")
 }
 
 [node name="NetallaBattleScene" type="Node2D"]

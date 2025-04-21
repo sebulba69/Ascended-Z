@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5hy2plr4tkof"]
 
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_uubdh"]
-[ext_resource type="Script" path="res://effects/DamageNumber.cs" id="2_wb0nj"]
+[ext_resource type="Script" uid="uid://dfmgs3568e7pp" path="res://effects/DamageNumber.cs" id="2_wb0nj"]
 
 [node name="DamageNumber" type="Label"]
 texture_filter = 2

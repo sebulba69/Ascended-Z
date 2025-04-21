@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://bkoeqgkoinh70"]
 
-[ext_resource type="Script" path="res://screens/cutscene/005. FinalBossCutscene/FinalBossCutsceneLab.cs" id="1_go5mb"]
+[ext_resource type="Script" uid="uid://c7fx4pb6l4736" path="res://screens/cutscene/005. FinalBossCutscene/FinalBossCutsceneLab.cs" id="1_go5mb"]
 [ext_resource type="Texture2D" uid="uid://cwh3cwourwrs2" path="res://cg_backgrounds/special_boss_bgs/bg00701_3.png" id="2_ovdso"]
 [ext_resource type="Texture2D" uid="uid://dgqc0jyyjlogy" path="res://entity_pics_special_bosses/draco/draco_full.png" id="3_ika7j"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="4_pqan5"]
@@ -56,9 +56,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fj30p"]
 _data = {
-"RESET": SubResource("Animation_6sc3j"),
-"fade_in_box": SubResource("Animation_f84gh"),
-"fade_out_box": SubResource("Animation_nno4p")
+&"RESET": SubResource("Animation_6sc3j"),
+&"fade_in_box": SubResource("Animation_f84gh"),
+&"fade_out_box": SubResource("Animation_nno4p")
 }
 
 [sub_resource type="Animation" id="Animation_omxub"]
@@ -282,10 +282,10 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jswqs"]
 _data = {
-"RESET": SubResource("Animation_omxub"),
-"boss_intro_scene": SubResource("Animation_iyg62"),
-"boss_intro_scene_draco": SubResource("Animation_hmg3s"),
-"opening_pan": SubResource("Animation_v68b4")
+&"RESET": SubResource("Animation_omxub"),
+&"boss_intro_scene": SubResource("Animation_iyg62"),
+&"boss_intro_scene_draco": SubResource("Animation_hmg3s"),
+&"opening_pan": SubResource("Animation_v68b4")
 }
 
 [node name="FusionIntroCutscene" type="Node2D"]

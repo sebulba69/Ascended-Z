@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://buju0tagq8y0v"]
 
 [ext_resource type="Texture2D" uid="uid://bnou72v0a5yxe" path="res://dungeon_crawling/art_assets/entity_icons/shopkeeper.png" id="1_a54vh"]
-[ext_resource type="Script" path="res://dungeon_crawling/scenes/crawl_ui/ShopkeeperUI.cs" id="1_n7841"]
+[ext_resource type="Script" uid="uid://ksvwq22xsw6y" path="res://dungeon_crawling/scenes/crawl_ui/ShopkeeperUI.cs" id="1_n7841"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_bqw5j"]
 [ext_resource type="Texture2D" uid="uid://h3thol0m40p1" path="res://misc_icons/IconSet.png" id="2_mu4kj"]
 

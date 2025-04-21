@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cunu4gha5vlbk"]
 
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="1_o2fcm"]
-[ext_resource type="Script" path="res://screens/end_screen/EndScreenOptions.cs" id="2_5wpqj"]
+[ext_resource type="Script" uid="uid://b78dy5nmd6xg3" path="res://screens/end_screen/EndScreenOptions.cs" id="2_5wpqj"]
 
 [node name="EndScreenOptions" type="ItemList"]
 texture_filter = 2

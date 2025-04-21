@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://x5wjfkdrjd1n"]
 
-[ext_resource type="Script" path="res://screens/settings_screen/SettingsScreen.cs" id="1_ba7mx"]
+[ext_resource type="Script" uid="uid://cpr8kkuhkduff" path="res://screens/settings_screen/SettingsScreen.cs" id="1_ba7mx"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="2_cfdrp"]
 
 [node name="SettingsScreen" type="CenterContainer"]

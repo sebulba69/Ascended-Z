@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://b2d2mj8klegoo"]
 
-[ext_resource type="Script" path="res://screens/full_screen_boss/YacnacalbBattleScene.cs" id="1_vf4f6"]
+[ext_resource type="Script" uid="uid://creii502yv7u5" path="res://screens/full_screen_boss/YacnacalbBattleScene.cs" id="1_vf4f6"]
 [ext_resource type="Texture2D" uid="uid://cus0kol5l4u7r" path="res://cg_backgrounds/dungeon/026.png" id="2_1oaln"]
 [ext_resource type="PackedScene" uid="uid://c15grewugbv3c" path="res://screens/full_screen_boss/FullScreenBossHUD.tscn" id="3_rh8gf"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="4_ndvom"]
@@ -249,9 +249,9 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ig7o"]
 _data = {
-"RESET": SubResource("Animation_eeod0"),
-"netalla_opening_shot": SubResource("Animation_af486"),
-"yacnacalb_opening_shot": SubResource("Animation_jpndp")
+&"RESET": SubResource("Animation_eeod0"),
+&"netalla_opening_shot": SubResource("Animation_af486"),
+&"yacnacalb_opening_shot": SubResource("Animation_jpndp")
 }
 
 [sub_resource type="Animation" id="Animation_22a18"]
@@ -288,8 +288,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ejjxc"]
 _data = {
-"RESET": SubResource("Animation_22a18"),
-"bg_fun": SubResource("Animation_rwtkx")
+&"RESET": SubResource("Animation_22a18"),
+&"bg_fun": SubResource("Animation_rwtkx")
 }
 
 [node name="Aiucxaiobh\'loBattleScene" type="Node2D"]

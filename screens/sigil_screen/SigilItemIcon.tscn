@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://kh5n3qtpc64c"]
 
-[ext_resource type="Script" path="res://screens/sigil_screen/SigilItemIcon.cs" id="1_alegq"]
+[ext_resource type="Script" uid="uid://4tr2wh8diq0d" path="res://screens/sigil_screen/SigilItemIcon.cs" id="1_alegq"]
 [ext_resource type="Texture2D" uid="uid://ck6svw8furcbu" path="res://misc_icons/sigil_images/07. light_icon.png" id="1_vnn7u"]
 
 [node name="SigilItemIcon" type="PanelContainer"]

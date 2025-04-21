@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7j87rlua58am"]
 
-[ext_resource type="Script" path="res://screens/teleport/TutorialScreen.cs" id="1_cqdmv"]
+[ext_resource type="Script" uid="uid://dfk6ijxt3i80d" path="res://screens/teleport/TutorialScreen.cs" id="1_cqdmv"]
 [ext_resource type="FontFile" uid="uid://brnrfmgvenlw4" path="res://fonts/ufonts.com_compacta-bold-bt.ttf" id="3_2tcjp"]
 
 [node name="TutorialScreen" type="CenterContainer"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://e163vjgbmr61"]
 
-[ext_resource type="Script" path="res://screens/cutscene/005. FinalBossCutscene/FinalBossCutscene.cs" id="1_4awlu"]
+[ext_resource type="Script" uid="uid://bexjhle33x2sg" path="res://screens/cutscene/005. FinalBossCutscene/FinalBossCutscene.cs" id="1_4awlu"]
 [ext_resource type="Texture2D" uid="uid://b56q58gg616lq" path="res://cg_backgrounds/special_boss_bgs/bg01105.jpg" id="1_mkotf"]
 [ext_resource type="Texture2D" uid="uid://daahtahiiftrg" path="res://entity_pics_special_bosses/netalla/final_boss_full_body.png" id="2_2idye"]
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="3_dvccn"]
@@ -55,9 +55,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fj30p"]
 _data = {
-"RESET": SubResource("Animation_6sc3j"),
-"fade_in_box": SubResource("Animation_f84gh"),
-"fade_out_box": SubResource("Animation_nno4p")
+&"RESET": SubResource("Animation_6sc3j"),
+&"fade_in_box": SubResource("Animation_f84gh"),
+&"fade_out_box": SubResource("Animation_nno4p")
 }
 
 [sub_resource type="Animation" id="Animation_omxub"]
@@ -169,9 +169,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jswqs"]
 _data = {
-"RESET": SubResource("Animation_omxub"),
-"boss_intro_scene": SubResource("Animation_iyg62"),
-"opening_pan": SubResource("Animation_v68b4")
+&"RESET": SubResource("Animation_omxub"),
+&"boss_intro_scene": SubResource("Animation_iyg62"),
+&"opening_pan": SubResource("Animation_v68b4")
 }
 
 [node name="FusionIntroCutscene" type="Node2D"]

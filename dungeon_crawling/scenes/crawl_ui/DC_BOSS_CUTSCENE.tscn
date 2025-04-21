@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1wo35okv61of"]
 
 [ext_resource type="PackedScene" uid="uid://j8w2qimbnd78" path="res://screens/AscendedTextbox.tscn" id="1_0irje"]
-[ext_resource type="Script" path="res://dungeon_crawling/scenes/crawl_ui/DC_BOSS_CUTSCENE.cs" id="1_bk6xg"]
+[ext_resource type="Script" uid="uid://dc1u2b5u3eydv" path="res://dungeon_crawling/scenes/crawl_ui/DC_BOSS_CUTSCENE.cs" id="1_bk6xg"]
 [ext_resource type="Texture2D" uid="uid://bongfd04m6nm0" path="res://entity_pics/aldmas.png" id="1_ga7wr"]
 
 [node name="DcBossCutscene" type="Control"]

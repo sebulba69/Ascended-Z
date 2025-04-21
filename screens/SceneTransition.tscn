@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bivspukara00x"]
 
-[ext_resource type="Script" path="res://screens/SceneTransition.cs" id="1_g1c1i"]
+[ext_resource type="Script" uid="uid://dggeaowd8g1g3" path="res://screens/SceneTransition.cs" id="1_g1c1i"]
 [ext_resource type="Texture2D" uid="uid://buwuurpybkt52" path="res://transitions/circle-xxl.png" id="1_lxuoi"]
 
 [sub_resource type="Animation" id="Animation_ww7i6"]
@@ -87,9 +87,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5d7hx"]
 _data = {
-"RESET": SubResource("Animation_ww7i6"),
-"fade_in": SubResource("Animation_b1swp"),
-"fade_out": SubResource("Animation_sdyvw")
+&"RESET": SubResource("Animation_ww7i6"),
+&"fade_in": SubResource("Animation_b1swp"),
+&"fade_out": SubResource("Animation_sdyvw")
 }
 
 [node name="SceneTransition" type="CanvasLayer"]
