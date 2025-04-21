@@ -48,6 +48,7 @@ namespace AscendedZ.entities.enemy_objects.bosses
             _skills2 = [windPA, icePA, almighty, _choir];
             _current = _skills1;
 
+
             Description = $"{Name}: Can increase its buff stacks from 2 to 4. Alternates between two scripts:\n" +
                 $"1. Uses single-hit Ice and Wind moves combined with buffs.\n\n" +
                 $"2. Uses all-hit Piercing Ice and Wind moves combined with debuffs.";
