@@ -82,14 +82,9 @@ public partial class DungeonScreen : Transitionable2DScene
         stayOption.ItemSelected += _OnStayButtonPressed;
         backOption.ItemSelected += _OnRetreatButtonPressed;
 
-        if(_gameObject.TierDC + 1 < _gameObject.TierDCCap)
+        if(_gameObject.TierDC + 1 < _gameObject.TierDCCap && _gameObject.TierDC + 1 < 301)
         {
             _endScreenItems.Add(continueOption);
-        }
-
-        if(_gameObject.TierDC+1 == 301)
-        {
-            _endScreenItems.Remove(continueOption);
         }
 
         _endScreenItems.Add(stayOption);
