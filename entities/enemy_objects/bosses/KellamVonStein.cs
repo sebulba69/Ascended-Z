@@ -46,7 +46,7 @@ namespace AscendedZ.entities.enemy_objects.bosses
             EnemyAction action = new EnemyAction();
 
             if (battleSceneObject.AlivePlayers.Count == 1)
-                _phase = 2;
+                _phase = 3;
 
             switch (_phase)
             {
@@ -85,6 +85,10 @@ namespace AscendedZ.entities.enemy_objects.bosses
                     {
                         action.Skill = Skills[3];
                     }
+                    break;
+                case 3:
+                    action.Skill = Skills[3];
+                    action.Target = battleSceneObject.AlivePlayers[0];
                     break;
             }
 
