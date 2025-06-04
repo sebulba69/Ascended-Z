@@ -20,7 +20,7 @@ public partial class ActionMenu : Control
 {
 	private ItemList _actionList;
 	private Label _menu;
-    private bool _canInput;
+    private bool _canInput = false;
     private int _selectedIndex;
     private ActionMenuState _state;
     private TextureRect _icon;
